@@ -5,6 +5,6 @@
 
 # Support Me <3
 
-![Ko-Fi](https://ko-fi.com/driedfish)
+Ko-Fi: https://ko-fi.com/driedfish
 
-![PAYPAL](https://www.paypal.com/paypalme/realdriedfish)
+PAYPAL: https://www.paypal.com/paypalme/realdriedfish
