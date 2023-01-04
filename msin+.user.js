@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        db.msin.jp improved
+// @name        (MSIN+) db.msin.jp improved
 // @description Check the Porn code to MISSAV and Sukebei if it exist.
 // @namespace   https://github.com/DayatXD
 // @author      KememChan
@@ -7,7 +7,7 @@
 // @require     http://code.jquery.com/jquery-3.1.0.slim.min.js
 // @grant       GM_xmlhttpRequest
 // @run-at      document-end
-// @version     1.0
+// @version     1.0.1
 // ==/UserScript==
 
 // Remove fucking Title
