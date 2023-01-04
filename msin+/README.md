@@ -1,5 +1,5 @@
 
-![Preview]("https://github.com/KememChan/userscripts/raw/main/msin+/msin+ preview.jpg")
+![Preview](https://github.com/KememChan/userscripts/raw/main/msin%2B/msin%2B%20preview.jpg)
 
 # DO THIS BEFORE INSTALLING!!
 
