@@ -1,6 +1,8 @@
+
+![Preview]("https://github.com/KememChan/userscripts/raw/main/msin+/msin+ preview.jpg")
+
 # DO THIS BEFORE INSTALLING!!
 
-![Preview](https://github.com/KememChan/userscripts/raw/main/msin+/msin+ preview.jpg)
 ![Step One](https://github.com/KememChan/userscripts/raw/main/msin+/msin+1.jpg)
 ![Step Two](https://github.com/KememChan/userscripts/raw/main/msin+/msin+2.jpg)
 
