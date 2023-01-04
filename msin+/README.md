@@ -1,7 +1,8 @@
 # DO THIS BEFORE INSTALLING!!
 
-![enter image description here](https://github.com/KememChan/userscripts/raw/main/msin+/msin+1.jpg)
-![enter image description here](https://github.com/KememChan/userscripts/raw/main/msin+/msin+2.jpg)
+![Preview](https://github.com/KememChan/userscripts/raw/main/msin+/msin+ preview.jpg)
+![Step One](https://github.com/KememChan/userscripts/raw/main/msin+/msin+1.jpg)
+![Step Two](https://github.com/KememChan/userscripts/raw/main/msin+/msin+2.jpg)
 
 # Support Me <3
 
