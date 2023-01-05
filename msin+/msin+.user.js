@@ -7,7 +7,7 @@
 // @require     http://code.jquery.com/jquery-3.1.0.slim.min.js
 // @grant       GM_xmlhttpRequest
 // @run-at      document-end
-// @version     1.0.1
+// @version     1.0.2
 // ==/UserScript==
 
 // Remove fucking Title
@@ -70,7 +70,10 @@ $(row).each(function () {
   var missav = `https://missav.com/en/search/${codeUrl}`;
 
   const fc2 = /^(FC2-PPV)+-(\d.+)/i;
+<<<<<<< Updated upstream
   // console.log(codeUrl, fc2.test(codeUrl))
+=======
+>>>>>>> Stashed changes
   if (fc2.test(codeUrl)) {
     codeUrl = fc2.exec(codeUrl)[2];
   }
@@ -109,7 +112,6 @@ function getSukebei(codeArray) {
   }
   codes = codes.slice(0, -1);
   let sukebeis = `https://sukebei.nyaa.si/?q=${codes}&s=seeders&o=desc`;
-  console.log(sukebeis);
 
   GM_xmlhttpRequest({
     method: "GET",
@@ -155,9 +157,13 @@ function getSukebei(codeArray) {
           `);
           movie_img.removeClass("unsubscribe_image");
 
+<<<<<<< Updated upstream
           console.log(code + " Found on Sukebei :)");
         } else {
           console.log(code + " Not Found on Sukebei :(");
+=======
+        } else {
+>>>>>>> Stashed changes
         }
         loading.remove();
       });
