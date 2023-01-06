@@ -7,7 +7,7 @@
 // @require     http://code.jquery.com/jquery-3.1.0.slim.min.js
 // @grant       GM_xmlhttpRequest
 // @run-at      document-end
-// @version     1.0.4
+// @version     1.0.5
 // ==/UserScript==
 
 // make jquery:contains case insensitive
@@ -151,9 +151,11 @@ async function getSukebei(codesArray, isMoviePage) {
       movie_img.removeClass("unsubscribe_image");
       // console.log(code + " Found on Sukebei :)");
     } else {
-      const found = movie_info.find(".movie_code.found");
-      if (found.length == 0) {
-        movie_img.addClass("unsubscribe_image");
+      if (isMoviePage == false) {
+        const found = movie_info.find(".movie_code.found");
+        if (found.length == 0) {
+          movie_img.addClass("unsubscribe_image");
+        }
       }
       // console.log(code + " Not Found on Sukebei :(");
     }
