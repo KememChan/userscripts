@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        (MSIN+) db.msin.jp improved
 // @description Check the Porn code to MISSAV and Sukebei if it exist.
-// @namespace   https://github.com/KememChan/userscripts
+// @namespace   https://github.com/KememChan
 // @author      KememChan
 // @match       https://db.msin.jp/*
 // @require     http://code.jquery.com/jquery-3.1.0.slim.min.js
