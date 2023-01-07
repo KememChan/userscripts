@@ -18,6 +18,8 @@ $.expr[":"].contains = $.expr.createPseudo(function (arg) {
 });
 
 function RemoveAndAddStuff() {
+  // set cookie
+  document.cookie = "config_view=filename%2Cunsubscribe%2Cacttag%2Cacttagd%2Cactrank%2C_blank%2Cactview%2Csampleview"
   // Remove fucking Title
   $(".movie_title").remove();
   // Remove movie code on domestic site that is not actually work
