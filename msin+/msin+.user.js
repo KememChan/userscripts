@@ -7,7 +7,7 @@
 // @require     http://code.jquery.com/jquery-3.1.0.slim.min.js
 // @grant       GM_xmlhttpRequest
 // @run-at      document-end
-// @version     1.0.5
+// @version     1.0.6
 // ==/UserScript==
 
 // make jquery:contains case insensitive
