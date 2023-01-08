@@ -1,13 +1,19 @@
+[![](https://img.shields.io/greasyfork/v/457600?label=MSIN%2B&style=flat-square)](https://greasyfork.org/en/scripts/457600-msin-db-msin-jp-improved) ![](https://img.shields.io/github/license/KememChan/userscripts?style=flat-square) [![](https://img.shields.io/github/stars/KememChan/userscripts?label=%E2%AD%90Github&style=flat-square)](https://github.com/KememChan/userscripts)
+## MSIN+ Introduction 😎
+
+This script enhances the functionality of [db.msin.jp](https://db.msin.jp/) by adding a button that allows you to easily watch or download movies. It searches for movie codes on [MissAV](https://missav.com/) and [Sukebei](https://sukebei.nyaa.si/) and, if found, will provide a button that takes you to **MissAV** to Watch or **Sukebei** Torrent/Magnet to Download.
+
+## How to Install 🔧
+
+ 1. [Download and Install](https://violentmonkey.github.io/get-it/)  **violentmonkey extension**
+ 2. [Install](https://github.com/KememChan/userscripts/raw/main/msin+/msin+.user.js) this **Script**
+ 3. Enjoy diving on [db.msin.jp](https://db.msin.jp/)
+
+## Screenshots 📷
 
 ![Preview](https://github.com/KememChan/userscripts/raw/main/msin%2B/msin%2B%20preview.jpg)
 
-# DO THIS BEFORE INSTALLING!!
+### Support Me ❤️
 
-![Step One](https://github.com/KememChan/userscripts/raw/main/msin+/msin+1.jpg)
-![Step Two](https://github.com/KememChan/userscripts/raw/main/msin+/msin+2.jpg)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/S6S5HJUOF) 
 
-# Support Me <3
-
-Ko-Fi: https://ko-fi.com/driedfish
-
-PAYPAL: https://www.paypal.com/paypalme/realdriedfish
