@@ -47,7 +47,7 @@ function removeDuplicatesArray(arr) {
 
 function getCodes(selector) {
   const codesElement = $(selector);
-  let regex = /^(carib|caribpr|1pon|paco|10mu)+-(\d.+)/i;
+  let regex = /^(carib|caribpr|1pon|10mu)+-(\d.+)/i;
   let codes = [];
 
   for (const codeElement of codesElement) {
@@ -110,7 +110,14 @@ async function getSukebei(codesArray, isMoviePage) {
   $(".msin").append(`<a class='loading'>Sukebei Loading...</a>`);
   // make codes list to "code|code|..."
   let codes = "";
-  for (const code of codesArray) {
+  let codesArrayNew = [];
+  const underscore = /^(paco)+-(\d.+)/i
+  for (let code of codesArray) {
+    // get only the number from [paco-/d-/d]
+    if (underscore.test(code)) {
+      code = underscore.exec(code)[2]
+    }
+    codesArrayNew.push(code)
     codes += `"${code}"` + "|";
   }
   codes = codes.slice(0, -1);
@@ -120,7 +127,7 @@ async function getSukebei(codesArray, isMoviePage) {
   // TO DO request on sukebei on all page if its more than 1 page
   const response = await makeGetRequest(sukebeis);
 
-  codesArray.forEach((code) => {
+  codesArrayNew.forEach((code) => {
     let msin;
     let movie_img;
     let movie_info;
@@ -180,11 +187,19 @@ async function getMissAV(codes, isMoviePage, codeSelector) {
       movie_pn = $(".mv_fileName");
       movie_img = $(".movie_image_ditail").children().first();
     }
-    // change div.movie_pn to a.movie_pn
-    movie_pn.replaceWith(
-      '<a class="movie_code">' + movie_pn.first().text() + "</a>"
+    // empty div.movie_pn and append a.movie_code
+    const movie_pn_code = movie_pn.first().text()
+    movie_pn.empty()
+    movie_pn.append(
+      '<a class="movie_code">' + movie_pn_code + "</a>"
     );
     const movie_code = $(`.movie_code:contains('${code}')`);
+
+    // get only the number from [paco-/d-/d] and replace _ to -
+    let underscore = /^(paco)+-(\d.+)/i
+    if (underscore.test(code)) {
+      code = underscore.exec(code)[2].replace("_", "-")
+    }
 
     // add id x to movie_code element for copy function
     movie_code.attr(`id`, `${x}`).attr;
