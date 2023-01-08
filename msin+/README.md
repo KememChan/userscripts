@@ -11,7 +11,8 @@ This script enhances the functionality of [db.msin.jp](https://db.msin.jp/) by a
 
 ## Screenshots 📷
 
-![Preview](https://github.com/KememChan/userscripts/raw/main/msin%2B/msin%2B%20preview.jpg)
+![before](https://github.com/KememChan/userscripts/raw/main/msin%2B/before.png)
+![after](https://github.com/KememChan/userscripts/raw/main/msin%2B/after.png)
 
 ### Support Me ❤️
 
