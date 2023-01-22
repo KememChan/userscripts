@@ -7,7 +7,7 @@
 // @require     http://code.jquery.com/jquery-3.1.0.slim.min.js
 // @grant       GM_xmlhttpRequest
 // @run-at      document-end
-// @version     1.0.7
+// @version     1.0.8
 // ==/UserScript==
 
 // make jquery:contains case insensitive
@@ -36,7 +36,7 @@ function RemoveAndAddStuff() {
 
 function checkMoviePage() {
   const currentUrl = window.location.href;
-  const regex = /.*page\/movie.*/i;
+  const regex = /.*page\/movie\?id.*/i;
   const testResult = regex.test(currentUrl);
   return testResult;
 }
