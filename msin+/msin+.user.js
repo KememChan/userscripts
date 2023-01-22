@@ -6,8 +6,9 @@
 // @match       https://db.msin.jp/*
 // @require     http://code.jquery.com/jquery-3.1.0.slim.min.js
 // @grant       GM_xmlhttpRequest
+// @grant       GM_addStyle
 // @run-at      document-end
-// @version     1.0.8
+// @version     1.1.0
 // ==/UserScript==
 
 // make jquery:contains case insensitive
@@ -32,6 +33,7 @@ function RemoveAndAddStuff() {
   $("head").append(
     '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">'
   );
+  ui()
 }
 
 function checkMoviePage() {
@@ -256,6 +258,101 @@ function swapCode(selector) {
   }
 }
 
+function sumAge() {
+  const birthYear = $(".mv_barth")
+  const movieCreateds = $(".movie_create a")
+  console.log(movieCreateds)
+  for (let movieCreated of movieCreateds) {
+    const date1 = new Date($(birthYear).text());
+    const date2 = new Date($(movieCreated).text())
+    const diffTime = date2.getTime() - date1.getTime();
+    const diffDay = diffTime / (1000 * 3600 * 24);
+    const years = Math.floor(diffDay / 365);
+    const yearsOld = `${years} Years old`
+    $(movieCreated).parent().after(`<a style="font-size: 80%;">${yearsOld}</a>`)
+  }
+}
+
+function ui() {
+  let actTag = $(".act_tag")
+  let actDitail = $(".act_ditail")
+  let edit = $(".edit")
+  edit.remove()
+  actDitail.append(actTag)
+  actTag.append(`<li>${edit.html()}</li>`)
+
+  let commentJump = $(".commentjump:contains('サンプル画像モード')")
+  let olbreadcumb = $("ol.breadcrumb")
+  commentJump.remove()
+  olbreadcumb.after(commentJump)
+
+  const css = `
+@media screen and (min-width: 610px) {
+  #content, #headbarspan, #catchmassage, .content {
+    max-width: 2922px;
+    width: auto;
+  }
+  .jp_movie_view .movie_info {
+    max-width: 100%;
+  }
+  .jp_movie_view .movie_image {
+    width: auto;
+    max-width: 100%;
+  }
+  .movie_info {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  #content, #headbarspan, #catchmassage, .content {
+    width: auto;
+  }
+}
+
+.actress_info_ditail {
+    background: #3b3a3a;
+    border-radius: 1rem;
+    margin: 1rem 0 1rem;
+}
+
+.movie_info {
+  max-width: 100%;
+}
+
+@media screen and (min-width: 2900px) {
+  .jp_movie_view_wrap { width: auto; margin-left: 0; }
+  .movie_view_wrap { width: auto; margin-left: 0; }
+}
+@media screen and (min-width: 1780px) {
+  .jp_movie_view_wrap { width: auto; margin-left: 0; }
+  .movie_view_wrap { width: auto; margin-left: 0; }
+}
+@media screen and (min-width: 1500px) {
+  .jp_movie_view_wrap { width: auto; margin-left: 0; }
+  .movie_view_wrap { width: auto; margin-left: 0; }
+}
+
+@media screen and (max-width: 609px) {
+  .act_left {
+    width: auto;
+    max-width: 100%;
+  }
+  .act_image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .actress_info_ditail {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+`
+  GM_addStyle(css)
+}
+
 async function main() {
   RemoveAndAddStuff();
   const isMoviePage = checkMoviePage();
@@ -263,6 +360,8 @@ async function main() {
   if (isMoviePage) {
     selector = ".mv_fileName";
     swapCode(selector);
+  } else {
+    sumAge()
   }
   let codes = getCodes(selector);
   codes = removeDuplicatesArray(codes);
