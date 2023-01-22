@@ -8,7 +8,7 @@
 // @grant       GM_xmlhttpRequest
 // @grant       GM_addStyle
 // @run-at      document-end
-// @version     1.1.0
+// @version     1.1.1
 // ==/UserScript==
 
 // make jquery:contains case insensitive
@@ -347,6 +347,10 @@ function ui() {
   .actress_info_ditail {
     flex-direction: column;
     justify-content: center;
+  }
+  .act_image img {
+    height: auto;
+    object-fit: contain;
   }
 }
 `
