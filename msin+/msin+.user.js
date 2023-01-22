@@ -8,7 +8,7 @@
 // @grant       GM_xmlhttpRequest
 // @grant       GM_addStyle
 // @run-at      document-end
-// @version     1.1.1
+// @version     1.1.2
 // ==/UserScript==
 
 // make jquery:contains case insensitive
@@ -261,15 +261,16 @@ function swapCode(selector) {
 function sumAge() {
   const birthYear = $(".mv_barth")
   const movieCreateds = $(".movie_create a")
-  console.log(movieCreateds)
-  for (let movieCreated of movieCreateds) {
-    const date1 = new Date($(birthYear).text());
-    const date2 = new Date($(movieCreated).text())
-    const diffTime = date2.getTime() - date1.getTime();
-    const diffDay = diffTime / (1000 * 3600 * 24);
-    const years = Math.floor(diffDay / 365);
-    const yearsOld = `${years} Years old`
-    $(movieCreated).parent().after(`<a style="font-size: 80%;">${yearsOld}</a>`)
+  if (birthYear.length) {
+    for (let movieCreated of movieCreateds) {
+      const date1 = new Date($(birthYear).text());
+      const date2 = new Date($(movieCreated).text())
+      const diffTime = date2.getTime() - date1.getTime();
+      const diffDay = diffTime / (1000 * 3600 * 24);
+      const years = Math.floor(diffDay / 365);
+      const yearsOld = `${years} Years old`
+      $(movieCreated).parent().after(`<a style="font-size: 80%;">${yearsOld}</a>`)
+    }
   }
 }
 
