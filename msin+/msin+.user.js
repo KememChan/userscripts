@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         (MSIN+) db.msin.jp improved
 // @namespace    https://github.com/KememChan
-// @version      1.2.0
+// @version      1.2.1
 // @author       KememChan
 // @description  Check the Porn code to MISSAV and Sukebei if it exist.
 // @icon         https://db.msin.jp/favicon.ico
@@ -1202,6 +1202,34 @@ var __plugin_monkey_exposed = function($2) {
       });
     }
   }
+  function Sukebei(movies2) {
+    let codes = "";
+    for (const movie of movies2) {
+      const code = $2(movie).find(".movie_code").attr("sukebeicode");
+      codes += `${code}|`;
+    }
+    const sukebeis = `https://sukebei.nyaa.si/?q=${codes}&s=seeders&o=desc`;
+    console.log("Requesting: " + sukebeis);
+    GM_xmlhttpRequest({
+      url: sukebeis,
+      onload(response) {
+        for (const movie of movies2) {
+          const code = $2(movie).find(".movie_code");
+          const containCode = $2(response.responseText).find(`tr:contains("${$2(code).attr("sukebeicode")}")`).first();
+          if (containCode.length) {
+            const torrent = "https://sukebei.nyaa.si/" + containCode.find("i.fa-download").parent().attr("href");
+            const magnet = containCode.find("i.fa-magnet").parent().attr("href");
+            const seedsNumber = containCode.children().eq(-3).text();
+            $2(movie).find(".link").append(`<a href='https://sukebei.nyaa.si/?q=${code}&s=seeders&o=desc' target='_blank' class='sukebei'> <img style='height: 1.2em;' src='https://sukebei.nyaa.si/static/favicon.png'></img></a>`);
+            $2(movie).find(".link").append(`<a style='font-size: 1.2em;' class="fa fa-fw fa-download" href='${torrent}'></a>`);
+            $2(movie).find(".link").append(`<a style='font-size: 1.2em; bottom: 0; position: relative; bottom: -1px;' class="fa fa-fw fa-magnet" href='${magnet}'></a>`);
+            $2(movie).find(".link").append(`<p style='font-size: 1.2em; color: lawngreen; font-weight: 600; position: relative; bottom: 5px;'>${seedsNumber}</p>`);
+            $2(movie).css("filter", "brightness(1)");
+          }
+        }
+      }
+    });
+  }
   function JavStore(movies2) {
     for (const movie of movies2) {
       let code = $2(movie).find(".movie_code").attr("missavcode");
@@ -1336,5 +1364,6 @@ var __plugin_monkey_exposed = function($2) {
   const movies = $2(".movie");
   JavStore(movies);
   MissAV(movies);
+  Sukebei(movies);
   return app;
 }($);
