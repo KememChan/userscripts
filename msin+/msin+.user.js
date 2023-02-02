@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         (MSIN+) db.msin.jp improved
 // @namespace    https://github.com/KememChan
-// @version      1.2.1
+// @version      1.2.2
 // @author       KememChan
 // @description  Check the Porn code to MISSAV and Sukebei if it exist.
 // @icon         https://db.msin.jp/favicon.ico
@@ -15,7 +15,7 @@
 // @grant        GM_xmlhttpRequest
 // ==/UserScript==
 
-(t=>{const e=document.createElement("style");e.dataset.source="vite-plugin-monkey",e.innerText=t,document.head.appendChild(e)})(":root{--font-size:1em}video.svelte-1mz2a9g.svelte-1mz2a9g{width:100%}.hidden.svelte-1mz2a9g.svelte-1mz2a9g{display:none}.link.svelte-1mz2a9g.svelte-1mz2a9g{height:1.2rem;margin-top:.2rem;padding:5px;background-color:#6c738033;display:flex;gap:5px;justify-content:center}.movie_desc.svelte-1mz2a9g.svelte-1mz2a9g{font-size:var(--font-size);font-family:Century Gothic,CenturyGothic,Geneva,AppleGothic,sans-serif;font-weight:700;text-align:center}.rounded.svelte-1mz2a9g.svelte-1mz2a9g{border-radius:5px}img.svelte-1mz2a9g.svelte-1mz2a9g{height:100%}.movie_thumbnail.svelte-1mz2a9g.svelte-1mz2a9g{aspect-ratio:16 / 9;background:#0b0e14;overflow:hidden;text-align:center;display:flex;justify-content:center}a.svelte-1mz2a9g.svelte-1mz2a9g{color:#bfbdb6;text-decoration:none;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.movie_desc.svelte-1mz2a9g>.svelte-1mz2a9g:hover{color:#ff8c00}.movie.svelte-1mz2a9g.svelte-1mz2a9g{background:#0d1017;display:flex;flex-direction:column}.movie_desc.svelte-1mz2a9g.svelte-1mz2a9g{display:grid;padding:.5rem}.movie_code.svelte-1mz2a9g.svelte-1mz2a9g{color:#bfbdb6;font-size:calc(var(--font-size) + .2em)}.movie_actress.svelte-1mz2a9g.svelte-1mz2a9g{color:#39bae6}@media screen and (min-width: 1400px){:root{--font-size:.8rem}}@media screen and (min-width: 1700px){:root{--font-size:.9rem}}.movie_grid.svelte-17uligy{--grid-count:auto-fit;margin:1rem 0;display:grid;grid-template-columns:repeat(var(--grid-count),minmax(min(200px,100%),1fr));gap:1rem}@media screen and (max-width: 500px){.movie_grid.svelte-17uligy{--grid-count:1}}@media screen and (min-width: 1600px){.movie_grid.svelte-17uligy{--grid-count:6}}");
+(t=>{const e=document.createElement("style");e.dataset.source="vite-plugin-monkey",e.innerText=t,document.head.appendChild(e)})(":root{--font-size:1em}video.svelte-1btv80w.svelte-1btv80w{width:100%}.hidden.svelte-1btv80w.svelte-1btv80w{display:none}.link.svelte-1btv80w.svelte-1btv80w{height:1.2rem;margin-top:.2rem;padding:5px;background-color:#6c738033;display:flex;gap:5px;justify-content:center}.movie_desc.svelte-1btv80w.svelte-1btv80w{font-size:var(--font-size);font-family:Century Gothic,CenturyGothic,Geneva,AppleGothic,sans-serif;font-weight:700;text-align:center}.rounded.svelte-1btv80w.svelte-1btv80w{border-radius:5px}img.svelte-1btv80w.svelte-1btv80w{height:100%}.movie_thumbnail.svelte-1btv80w.svelte-1btv80w{aspect-ratio:16 / 9;background:#0b0e14;overflow:hidden;text-align:center;display:flex;justify-content:center}a.svelte-1btv80w.svelte-1btv80w{color:#bfbdb6;text-decoration:none;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.movie_desc.svelte-1btv80w>.svelte-1btv80w:hover{color:#ff8c00}.movie.svelte-1btv80w.svelte-1btv80w{background:#0d1017;display:flex;flex-direction:column}.movie_desc.svelte-1btv80w.svelte-1btv80w{display:grid;padding:.5rem}.movie_code.svelte-1btv80w.svelte-1btv80w{color:#bfbdb6;font-size:calc(var(--font-size) + .2em)}.movie_actress.svelte-1btv80w.svelte-1btv80w{color:#39bae6}@media screen and (min-width: 1400px){:root{--font-size:.8rem}}@media screen and (min-width: 1700px){:root{--font-size:.9rem}}.movie_grid.svelte-16tg0z5{--grid-count:auto-fit;margin:1rem 0;display:grid;grid-template-columns:repeat(var(--grid-count),minmax(min(200px,100%),1fr));gap:1rem}@media screen and (max-width: 500px){.movie_grid.svelte-16tg0z5{--grid-count:2}:root{--font-size:.8em}}@media screen and (min-width: 1600px){.movie_grid.svelte-16tg0z5{--grid-count:6}}");
 
 var __plugin_monkey_exposed = function($2) {
   "use strict";
@@ -541,7 +541,7 @@ var __plugin_monkey_exposed = function($2) {
         video.loop = true;
         video.muted = true;
         video.playsInline = true;
-        attr(video, "class", "svelte-1mz2a9g");
+        attr(video, "class", "svelte-1btv80w");
         toggle_class(
           video,
           "hidden",
@@ -553,59 +553,59 @@ var __plugin_monkey_exposed = function($2) {
           attr(img, "src", img_src_value);
         attr(img, "loading", "lazy");
         attr(img, "alt", "thumbnail image");
-        attr(img, "class", "svelte-1mz2a9g");
+        attr(img, "class", "svelte-1btv80w");
         toggle_class(
           img,
           "hidden",
           /*hidden*/
           ctx[15] === false
         );
-        attr(div0, "class", "movie_thumbnail rounded text-center width-ratio svelte-1mz2a9g");
+        attr(div0, "class", "movie_thumbnail rounded text-center width-ratio svelte-1btv80w");
         attr(
           a0,
           "href",
           /*movieCodeUrl*/
           ctx[7]
         );
-        attr(a0, "class", "movie_code svelte-1mz2a9g");
+        attr(a0, "class", "movie_code svelte-1btv80w");
         attr(
           a1,
           "href",
           /*movieDateUrl*/
           ctx[8]
         );
-        attr(a1, "class", "movie_date svelte-1mz2a9g");
+        attr(a1, "class", "movie_date svelte-1btv80w");
         attr(
           a2,
           "href",
           /*movieTitleUrl*/
           ctx[11]
         );
-        attr(a2, "class", "movie_title svelte-1mz2a9g");
+        attr(a2, "class", "movie_title svelte-1btv80w");
         attr(
           a3,
           "href",
           /*mfrUrl*/
           ctx[9]
         );
-        attr(a3, "class", "mfr svelte-1mz2a9g");
+        attr(a3, "class", "mfr svelte-1btv80w");
         attr(
           a4,
           "href",
           /*movieMakerUrl*/
           ctx[10]
         );
-        attr(a4, "class", "movie_maker svelte-1mz2a9g");
+        attr(a4, "class", "movie_maker svelte-1btv80w");
         attr(
           a5,
           "href",
           /*nameUrl*/
           ctx[12]
         );
-        attr(a5, "class", "movie_actress svelte-1mz2a9g");
-        attr(div1, "class", "link rounded svelte-1mz2a9g");
-        attr(div2, "class", "movie_desc svelte-1mz2a9g");
-        attr(div3, "class", "movie rounded svelte-1mz2a9g");
+        attr(a5, "class", "movie_actress svelte-1btv80w");
+        attr(div1, "class", "link rounded svelte-1btv80w");
+        attr(div2, "class", "movie_desc svelte-1btv80w");
+        attr(div3, "class", "movie rounded svelte-1btv80w");
       },
       m(target, anchor) {
         insert(target, div3, anchor);
@@ -930,13 +930,13 @@ var __plugin_monkey_exposed = function($2) {
     const pacomama = /^(paco)+-(\d.+)/i;
     const movie_infos = $2(".movie_info");
     for (const movie_info of movie_infos) {
-      let movie_code = $2(movie_info).find(".movie_pn").text().toUpperCase();
-      if (regex.test(movie_code)) {
-        movie_code = regex.exec(movie_code)[2];
-      }
-      let sukebeiCode = movie_code;
-      if (pacomama.test(sukebeiCode)) {
-        sukebeiCode = pacomama.exec(sukebeiCode)[2];
+      let sukebeiCode = $2(movie_info).find(".movie_pn").text().toUpperCase();
+      let missAVCode = sukebeiCode;
+      if (regex.test(sukebeiCode)) {
+        if (pacomama.test(missAVCode)) {
+          missAVCode = pacomama.exec(missAVCode)[2].replace("_", "-");
+        }
+        sukebeiCode = regex.exec(sukebeiCode)[2];
       }
       let name = $2(movie_info).find(".movie_artist").children().children();
       if (name.length === 0) {
@@ -947,7 +947,7 @@ var __plugin_monkey_exposed = function($2) {
       const movie = {
         thumbnail: $2(movie_info).find("img").attr("src"),
         movieCode: $2(movie_info).find(".movie_pn").text().toUpperCase(),
-        missAVCode: movie_code,
+        missAVCode,
         sukebeiCode,
         movieCodeUrl: $2(movie_info).find(".movie_title").children().attr("href"),
         movieDate: $2(movie_info).find(".movie_create").children().text(),
@@ -1058,7 +1058,7 @@ var __plugin_monkey_exposed = function($2) {
         if (each_1_else) {
           each_1_else.c();
         }
-        attr(div, "class", "movie_grid svelte-17uligy");
+        attr(div, "class", "movie_grid svelte-16tg0z5");
       },
       m(target, anchor) {
         insert(target, div, anchor);
@@ -1220,7 +1220,7 @@ var __plugin_monkey_exposed = function($2) {
             const torrent = "https://sukebei.nyaa.si/" + containCode.find("i.fa-download").parent().attr("href");
             const magnet = containCode.find("i.fa-magnet").parent().attr("href");
             const seedsNumber = containCode.children().eq(-3).text();
-            $2(movie).find(".link").append(`<a href='https://sukebei.nyaa.si/?q=${code}&s=seeders&o=desc' target='_blank' class='sukebei'> <img style='height: 1.2em;' src='https://sukebei.nyaa.si/static/favicon.png'></img></a>`);
+            $2(movie).find(".link").append(`<a href='https://sukebei.nyaa.si/?q=${code.attr("sukebeicode")}&s=seeders&o=desc' target='_blank' class='sukebei'> <img style='height: 1.2em;' src='https://sukebei.nyaa.si/static/favicon.png'></img></a>`);
             $2(movie).find(".link").append(`<a style='font-size: 1.2em;' class="fa fa-fw fa-download" href='${torrent}'></a>`);
             $2(movie).find(".link").append(`<a style='font-size: 1.2em; bottom: 0; position: relative; bottom: -1px;' class="fa fa-fw fa-magnet" href='${magnet}'></a>`);
             $2(movie).find(".link").append(`<p style='font-size: 1.2em; color: lawngreen; font-weight: 600; position: relative; bottom: 5px;'>${seedsNumber}</p>`);
