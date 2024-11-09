@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       fc2ppvdb-improved
 // @namespace  fc2ppvdb.com-improved
-// @version    1.0.1
+// @version    1.0.2
 // @author     KememChan
 // @icon       https://www.google.com/s2/favicons?sz=32&domain_url=https%3A%2F%2Ffc2ppvdb.com%2Farticles%2F4558488
 // @match      https://fc2ppvdb.com/*
@@ -10,7 +10,7 @@
 // @grant      GM_xmlhttpRequest
 // ==/UserScript==
 
-(e=>{if(typeof GM_addStyle=="function"){GM_addStyle(e);return}const t=document.createElement("style");t.textContent=e,document.head.append(t)})(' @import"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";.resources.svelte-1osydsn.svelte-1osydsn{display:flex;justify-content:end;gap:5px}li.svelte-1osydsn.svelte-1osydsn{list-style-type:none}.seed.svelte-1osydsn.svelte-1osydsn{color:#adff2f;transition:all .3s ease-in-out}.seed.svelte-1osydsn.svelte-1osydsn:hover{color:#9acd32;transform:scale(1.1)}li.svelte-1osydsn>.svelte-1osydsn{transition:transform .3s ease-in-out;color:#fff}.sukebei.svelte-1osydsn.svelte-1osydsn:hover,.torrent.svelte-1osydsn.svelte-1osydsn:hover,.magnet.svelte-1osydsn.svelte-1osydsn:hover,.seed.svelte-1osydsn.svelte-1osydsn:hover{transform:scale(1.1);color:#0f0}@keyframes svelte-1osydsn-scale{0%{transform:scale(1)}50%{transform:scale(1.01)}to{transform:scale(1.05)}}.flex.svelte-knutg5.svelte-knutg5{justify-content:space-between;align-items:center;transition:transform .3s ease-in-out}.no-video.svelte-knutg5.svelte-knutg5{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:1.2rem;padding:10px;background-color:#000;border-radius:5%;color:#fff;opacity:0;animation:svelte-knutg5-popup .3s ease-in-out forwards;will-change:transform,opacity}video.svelte-knutg5.svelte-knutg5{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain}.code.svelte-knutg5.svelte-knutg5{color:#fff;position:absolute;top:0;background-color:#1f2937;padding-inline:5px;transition:transform .3s ease-in-out}.grid-item-wrapper.svelte-knutg5:hover .code.svelte-knutg5{animation:svelte-knutg5-flash .3s ease-in-out forwards}.grid-item.svelte-knutg5.svelte-knutg5{position:relative;width:100%;padding-top:56.25%;background:#eee;transition:transform .3s ease-in-out;will-change:transform}.grid-item-wrapper.svelte-knutg5:hover .grid-item.svelte-knutg5{animation:svelte-knutg5-flash .3s ease-in-out forwards}.grid-item.svelte-knutg5 img.svelte-knutg5{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background-color:#1f2937;transition:filter .3s ease-in-out;will-change:filter}.grid-item-wrapper.svelte-knutg5:hover .grid-item img.svelte-knutg5{animation:svelte-knutg5-blur .3s ease-in-out forwards}.grid-item-title.svelte-knutg5.svelte-knutg5{color:#fff;font-size:14px;margin-top:5px;width:100%;transition:transform .3s ease-in-out}.title.svelte-knutg5.svelte-knutg5{overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical}.maker.svelte-knutg5.svelte-knutg5{color:#6495ed;transition:transform .3s ease-in-out}.maker.svelte-knutg5.svelte-knutg5:hover{color:#1e90ff;transform:scale(1.1)}.grid-item-wrapper.svelte-knutg5.svelte-knutg5{transition:transform .3s ease-in-out;will-change:transform}.grid-item-wrapper.svelte-knutg5.svelte-knutg5:hover{animation:svelte-knutg5-scale .3s ease-in-out forwards}@keyframes svelte-knutg5-popup{0%{opacity:0;transform:translate(-50%,-50%) scale(.8)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}@keyframes svelte-knutg5-flash{0%{background-color:#1f2937}50%{background-color:#333}to{background-color:#1f2937}}@keyframes svelte-knutg5-blur{0%{filter:blur(0) brightness(1)}50%{filter:blur(1px) brightness(.7)}to{filter:blur(2px) brightness(.5)}}@keyframes svelte-knutg5-scale{0%{transform:scale(1)}50%{transform:scale(1.01)}to{transform:scale(1.05)}}.loading.svelte-yp0c0n{font-size:2rem;text-align:center;display:flex;justify-content:center;align-items:center;animation:svelte-yp0c0n-loadingAnimation 2s infinite}@keyframes svelte-yp0c0n-loadingAnimation{0%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.1)}to{opacity:1;transform:scale(1)}}.grid-container.svelte-yp0c0n{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;padding:1rem;opacity:0;animation:svelte-yp0c0n-fadeIn 2s forwards}@media (max-width: 1025px){.grid-container.svelte-yp0c0n{grid-template-columns:repeat(2,1fr)}}@media (max-width: 500px){.grid-container.svelte-yp0c0n{grid-template-columns:repeat(1,1fr)}}@keyframes svelte-yp0c0n-fadeIn{to{opacity:1}}div.svelte-1jfd2dh{display:inline-block;position:relative;width:100%;height:0;padding-top:56.25%;overflow:hidden}img.svelte-1jfd2dh,video.svelte-1jfd2dh{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;transition:filter .3s ease-in-out;background-color:#000}img.svelte-1jfd2dh:hover{filter:brightness(.5)}.no-video.svelte-1jfd2dh{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:1.5rem} ');
+(e=>{if(typeof GM_addStyle=="function"){GM_addStyle(e);return}const t=document.createElement("style");t.textContent=e,document.head.append(t)})(' @import"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";.resources.svelte-mhmjd3.svelte-mhmjd3{display:flex;justify-content:flex-end;gap:5px;list-style-type:none}.resources.svelte-mhmjd3>.svelte-mhmjd3{transition:transform .3s ease-in-out,color .3s ease-in-out;color:#fff}.seed.svelte-mhmjd3.svelte-mhmjd3{color:#adff2f;transition:all .3s ease-in-out}.resources.svelte-mhmjd3>.svelte-mhmjd3:hover{color:#0f0}.grid-item-wrapper.svelte-zi5z1m.svelte-zi5z1m{transition:transform .3s ease-in-out,filter .3s ease-in-out;will-change:transform,filter}.grid-item-wrapper.svelte-zi5z1m.svelte-zi5z1m:hover{animation:none;transform:scale(1.05)}.grid-item.svelte-zi5z1m.svelte-zi5z1m{position:relative;width:100%;padding-top:56.25%;overflow:hidden;transition:transform .3s ease-in-out;will-change:transform}.grid-item.svelte-zi5z1m.svelte-zi5z1m:hover{animation:none;transform:scale(1.02)}.grid-item.svelte-zi5z1m img.svelte-zi5z1m{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background-color:#1f2937;transition:filter .3s ease-in-out;will-change:filter}.grid-item.svelte-zi5z1m:hover img.svelte-zi5z1m{animation:none;filter:blur(2px) brightness(.5)}video.svelte-zi5z1m.svelte-zi5z1m{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain}.code.svelte-zi5z1m.svelte-zi5z1m{color:#fff;position:absolute;top:0;background-color:#1f2937e6;padding:5px;font-size:.8rem}.no-video.svelte-zi5z1m.svelte-zi5z1m{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:1.2rem;padding:10px;background-color:#000c;border-radius:8px;color:#fff;opacity:0;animation:svelte-zi5z1m-popup .3s ease-in-out forwards;will-change:transform,opacity}.flex.svelte-zi5z1m.svelte-zi5z1m{display:flex;justify-content:space-between;align-items:center;transition:transform .3s ease-in-out}.grid-item-title.svelte-zi5z1m.svelte-zi5z1m{color:#fff;font-size:14px;margin-top:5px;width:100%;transition:transform .3s ease-in-out}.title.svelte-zi5z1m.svelte-zi5z1m{overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical}.maker.svelte-zi5z1m.svelte-zi5z1m{color:#6495ed;transition:color .3s ease-in-out,transform .3s ease-in-out}.maker.svelte-zi5z1m.svelte-zi5z1m:hover{color:#1e90ff;transform:scale(1.1)}@keyframes svelte-zi5z1m-popup{0%{opacity:0;transform:translate(-50%,-50%) scale(.8)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}@keyframes svelte-zi5z1m-flash{0%{background-color:#1f2937e6}50%{background-color:#333333e6}to{background-color:#1f2937e6}}@keyframes svelte-zi5z1m-blur{0%{filter:blur(0) brightness(1)}50%{filter:blur(1px) brightness(.7)}to{filter:blur(2px) brightness(.5)}}@keyframes svelte-zi5z1m-scale{0%{transform:scale(1)}50%{transform:scale(1.02)}to{transform:scale(1.05)}}.grid-container.svelte-6wm1x2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;padding:2rem;margin:0 auto;animation:svelte-6wm1x2-fadeIn 1s ease-out forwards}@media (min-width: 2000px){.grid-container.svelte-6wm1x2{grid-template-columns:repeat(5,1fr);font-size:.9em}}@media (max-width: 1600px){.grid-container.svelte-6wm1x2{grid-template-columns:repeat(4,1fr);font-size:.85em}}@media (max-width: 1200px){.grid-container.svelte-6wm1x2{grid-template-columns:repeat(3,1fr);gap:1.2rem;padding:1.5rem;font-size:.8em}}@media (max-width: 900px){.grid-container.svelte-6wm1x2{grid-template-columns:repeat(2,1fr);gap:1rem;padding:1rem;font-size:.75em}}@media (max-width: 600px){.grid-container.svelte-6wm1x2{grid-template-columns:1fr;gap:.8rem;padding:.8rem;font-size:.7em}}@keyframes svelte-6wm1x2-fadeIn{0%{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}div.svelte-1jfd2dh{display:inline-block;position:relative;width:100%;height:0;padding-top:56.25%;overflow:hidden}img.svelte-1jfd2dh,video.svelte-1jfd2dh{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;transition:filter .3s ease-in-out;background-color:#000}img.svelte-1jfd2dh:hover{filter:brightness(.5)}.no-video.svelte-1jfd2dh{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:1.5rem} ');
 
 (function ($) {
   'use strict';
@@ -66,11 +66,11 @@
   function is_empty(obj) {
     return Object.keys(obj).length === 0;
   }
-  function append(target2, node) {
-    target2.appendChild(node);
+  function append(target, node) {
+    target.appendChild(node);
   }
-  function insert(target2, node, anchor) {
-    target2.insertBefore(node, anchor || null);
+  function insert(target, node, anchor) {
+    target.insertBefore(node, anchor || null);
   }
   function detach(node) {
     if (node.parentNode) {
@@ -110,6 +110,13 @@
     if (text2.data === data) return;
     text2.data = /** @type {string} */
     data;
+  }
+  function set_style(node, key, value, important) {
+    if (value == null) {
+      node.style.removeProperty(key);
+    } else {
+      node.style.setProperty(key, value, "");
+    }
   }
   let current_component;
   function set_current_component(component) {
@@ -318,9 +325,9 @@
   function create_component(block) {
     block && block.c();
   }
-  function mount_component(component, target2, anchor) {
+  function mount_component(component, target, anchor) {
     const { fragment, after_update } = component.$$;
-    fragment && fragment.m(target2, anchor);
+    fragment && fragment.m(target, anchor);
     add_render_callback(() => {
       const new_on_destroy = component.$$.on_mount.map(run).filter(is_function);
       if (component.$$.on_destroy) {
@@ -493,102 +500,7 @@
       });
     });
   }
-  function create_if_block$3(ctx) {
-    let a0;
-    let i0;
-    let t0;
-    let a1;
-    let i1;
-    let t1;
-    let button;
-    let t2;
-    return {
-      c() {
-        a0 = element("a");
-        i0 = element("i");
-        t0 = space();
-        a1 = element("a");
-        i1 = element("i");
-        t1 = space();
-        button = element("button");
-        t2 = text(
-          /*seed*/
-          ctx[3]
-        );
-        attr(i0, "class", "fa-solid fa-arrow-down");
-        attr(i0, "aria-hidden", "true");
-        attr(a0, "class", "torrent svelte-1osydsn");
-        attr(
-          a0,
-          "href",
-          /*torrent*/
-          ctx[1]
-        );
-        attr(a0, "rel", "noopener");
-        attr(a0, "title", "Download Torrent");
-        attr(i1, "class", "fa-solid fa-magnet");
-        attr(i1, "aria-hidden", "true");
-        attr(a1, "class", "magnet svelte-1osydsn");
-        attr(
-          a1,
-          "href",
-          /*magnet*/
-          ctx[2]
-        );
-        attr(a1, "rel", "noopener");
-        attr(a1, "title", "Download with Magnet");
-        attr(button, "class", "seed svelte-1osydsn");
-        attr(button, "type", "button");
-      },
-      m(target2, anchor) {
-        insert(target2, a0, anchor);
-        append(a0, i0);
-        insert(target2, t0, anchor);
-        insert(target2, a1, anchor);
-        append(a1, i1);
-        insert(target2, t1, anchor);
-        insert(target2, button, anchor);
-        append(button, t2);
-      },
-      p(ctx2, dirty) {
-        if (dirty & /*torrent*/
-        2) {
-          attr(
-            a0,
-            "href",
-            /*torrent*/
-            ctx2[1]
-          );
-        }
-        if (dirty & /*magnet*/
-        4) {
-          attr(
-            a1,
-            "href",
-            /*magnet*/
-            ctx2[2]
-          );
-        }
-        if (dirty & /*seed*/
-        8) set_data(
-          t2,
-          /*seed*/
-          ctx2[3]
-        );
-      },
-      d(detaching) {
-        if (detaching) {
-          detach(a0);
-          detach(t0);
-          detach(a1);
-          detach(t1);
-          detach(button);
-        }
-      }
-    };
-  }
-  function create_fragment$3(ctx) {
-    let li;
+  function create_if_block$2(ctx) {
     let a0;
     let i0;
     let a0_href_value;
@@ -605,13 +517,16 @@
     let i3;
     let a3_href_value;
     let t3;
-    let if_block = (
-      /*torrent*/
-      ctx[1] && create_if_block$3(ctx)
-    );
+    let a4;
+    let i4;
+    let t4;
+    let a5;
+    let i5;
+    let t5;
+    let button;
+    let t6;
     return {
       c() {
-        li = element("li");
         a0 = element("a");
         i0 = element("i");
         t0 = space();
@@ -620,15 +535,24 @@
         t1 = space();
         a2 = element("a");
         i2 = element("i");
-        i2.innerHTML = ``;
         t2 = space();
         a3 = element("a");
         i3 = element("i");
         t3 = space();
-        if (if_block) if_block.c();
+        a4 = element("a");
+        i4 = element("i");
+        t4 = space();
+        a5 = element("a");
+        i5 = element("i");
+        t5 = space();
+        button = element("button");
+        t6 = text(
+          /*seed*/
+          ctx[3]
+        );
         attr(i0, "class", "fa-solid fa-globe");
         attr(i0, "aria-hidden", "true");
-        attr(a0, "class", "missav svelte-1osydsn");
+        attr(a0, "class", "missav svelte-mhmjd3");
         attr(a0, "href", a0_href_value = "https://missav.com/en/search/" + /*code*/
         ctx[0]);
         attr(a0, "target", "_blank");
@@ -636,7 +560,7 @@
         attr(a0, "title", "Search on MissAV");
         attr(i1, "class", "fa-solid fa-globe");
         attr(i1, "aria-hidden", "true");
-        attr(a1, "class", "njav svelte-1osydsn");
+        attr(a1, "class", "njav svelte-mhmjd3");
         attr(a1, "href", a1_href_value = "https://njav.tv/en/search?keyword=" + /*code*/
         ctx[0]);
         attr(a1, "target", "_blank");
@@ -649,34 +573,63 @@
         attr(a2, "target", "_blank");
         attr(a2, "rel", "noopener");
         attr(a2, "title", "Search Images");
-        attr(a2, "class", "svelte-1osydsn");
+        attr(a2, "class", "svelte-mhmjd3");
         attr(i3, "class", "fa-solid fa-magnifying-glass");
         attr(i3, "aria-hidden", "true");
-        attr(a3, "class", "sukebei svelte-1osydsn");
-        attr(a3, "href", a3_href_value = `https://sukebei.nyaa.si/?f=0&c=0_0&q=${/*code*/
-      ctx[0]}&s=seeders&o=desc`);
+        attr(a3, "class", "sukebei svelte-mhmjd3");
+        attr(a3, "href", a3_href_value = "https://sukebei.nyaa.si/?f=0&c=0_0&q=" + /*code*/
+        ctx[0] + "&s=seeders&o=desc");
         attr(a3, "target", "_blank");
         attr(a3, "rel", "noopener");
         attr(a3, "title", "Search on Sukebei");
-        attr(li, "class", "resources svelte-1osydsn");
+        attr(i4, "class", "fa-solid fa-arrow-down");
+        attr(i4, "aria-hidden", "true");
+        attr(a4, "class", "torrent svelte-mhmjd3");
+        attr(
+          a4,
+          "href",
+          /*torrent*/
+          ctx[1]
+        );
+        attr(a4, "rel", "noopener");
+        attr(a4, "title", "Download Torrent");
+        attr(i5, "class", "fa-solid fa-magnet");
+        attr(i5, "aria-hidden", "true");
+        attr(a5, "class", "magnet svelte-mhmjd3");
+        attr(
+          a5,
+          "href",
+          /*magnet*/
+          ctx[2]
+        );
+        attr(a5, "rel", "noopener");
+        attr(a5, "title", "Download with Magnet");
+        attr(button, "class", "seed svelte-mhmjd3");
+        attr(button, "type", "button");
       },
-      m(target2, anchor) {
-        insert(target2, li, anchor);
-        append(li, a0);
+      m(target, anchor) {
+        insert(target, a0, anchor);
         append(a0, i0);
-        append(li, t0);
-        append(li, a1);
+        insert(target, t0, anchor);
+        insert(target, a1, anchor);
         append(a1, i1);
-        append(li, t1);
-        append(li, a2);
+        insert(target, t1, anchor);
+        insert(target, a2, anchor);
         append(a2, i2);
-        append(li, t2);
-        append(li, a3);
+        insert(target, t2, anchor);
+        insert(target, a3, anchor);
         append(a3, i3);
-        append(li, t3);
-        if (if_block) if_block.m(li, null);
+        insert(target, t3, anchor);
+        insert(target, a4, anchor);
+        append(a4, i4);
+        insert(target, t4, anchor);
+        insert(target, a5, anchor);
+        append(a5, i5);
+        insert(target, t5, anchor);
+        insert(target, button, anchor);
+        append(button, t6);
       },
-      p(ctx2, [dirty]) {
+      p(ctx2, dirty) {
         if (dirty & /*code*/
         1 && a0_href_value !== (a0_href_value = "https://missav.com/en/search/" + /*code*/
         ctx2[0])) {
@@ -693,10 +646,71 @@
           attr(a2, "href", a2_href_value);
         }
         if (dirty & /*code*/
-        1 && a3_href_value !== (a3_href_value = `https://sukebei.nyaa.si/?f=0&c=0_0&q=${/*code*/
-      ctx2[0]}&s=seeders&o=desc`)) {
+        1 && a3_href_value !== (a3_href_value = "https://sukebei.nyaa.si/?f=0&c=0_0&q=" + /*code*/
+        ctx2[0] + "&s=seeders&o=desc")) {
           attr(a3, "href", a3_href_value);
         }
+        if (dirty & /*torrent*/
+        2) {
+          attr(
+            a4,
+            "href",
+            /*torrent*/
+            ctx2[1]
+          );
+        }
+        if (dirty & /*magnet*/
+        4) {
+          attr(
+            a5,
+            "href",
+            /*magnet*/
+            ctx2[2]
+          );
+        }
+        if (dirty & /*seed*/
+        8) set_data(
+          t6,
+          /*seed*/
+          ctx2[3]
+        );
+      },
+      d(detaching) {
+        if (detaching) {
+          detach(a0);
+          detach(t0);
+          detach(a1);
+          detach(t1);
+          detach(a2);
+          detach(t2);
+          detach(a3);
+          detach(t3);
+          detach(a4);
+          detach(t4);
+          detach(a5);
+          detach(t5);
+          detach(button);
+        }
+      }
+    };
+  }
+  function create_fragment$3(ctx) {
+    let li;
+    let if_block = (
+      /*torrent*/
+      ctx[1] && create_if_block$2(ctx)
+    );
+    return {
+      c() {
+        li = element("li");
+        if (if_block) if_block.c();
+        attr(li, "class", "resources svelte-mhmjd3");
+      },
+      m(target, anchor) {
+        insert(target, li, anchor);
+        if (if_block) if_block.m(li, null);
+      },
+      p(ctx2, [dirty]) {
         if (
           /*torrent*/
           ctx2[1]
@@ -704,7 +718,7 @@
           if (if_block) {
             if_block.p(ctx2, dirty);
           } else {
-            if_block = create_if_block$3(ctx2);
+            if_block = create_if_block$2(ctx2);
             if_block.c();
             if_block.m(li, null);
           }
@@ -762,9 +776,9 @@
         await_block_anchor = empty();
         info.block.c();
       },
-      m(target2, anchor) {
-        insert(target2, await_block_anchor, anchor);
-        info.block.m(target2, info.anchor = anchor);
+      m(target, anchor) {
+        insert(target, await_block_anchor, anchor);
+        info.block.m(target, info.anchor = anchor);
         info.mount = () => await_block_anchor.parentNode;
         info.anchor = await_block_anchor;
       },
@@ -798,7 +812,7 @@
         /*videoPreview*/
         ctx2[6]
       ) return create_if_block_2$1;
-      return create_else_block$2;
+      return create_else_block$1;
     }
     let current_block_type = select_block_type(ctx);
     let if_block = current_block_type(ctx);
@@ -807,9 +821,9 @@
         if_block.c();
         if_block_anchor = empty();
       },
-      m(target2, anchor) {
-        if_block.m(target2, anchor);
-        insert(target2, if_block_anchor, anchor);
+      m(target, anchor) {
+        if_block.m(target, anchor);
+        insert(target, if_block_anchor, anchor);
       },
       p(ctx2, dirty) {
         if (current_block_type === (current_block_type = select_block_type(ctx2)) && if_block) {
@@ -831,16 +845,16 @@
       }
     };
   }
-  function create_else_block$2(ctx) {
+  function create_else_block$1(ctx) {
     let p;
     return {
       c() {
         p = element("p");
         p.textContent = "No Preview 😭";
-        attr(p, "class", "no-video svelte-knutg5");
+        attr(p, "class", "no-video svelte-zi5z1m");
       },
-      m(target2, anchor) {
-        insert(target2, p, anchor);
+      m(target, anchor) {
+        insert(target, p, anchor);
       },
       p: noop,
       d(detaching) {
@@ -863,10 +877,10 @@
         video.loop = true;
         video.muted = true;
         attr(video, "preload", "none");
-        attr(video, "class", "svelte-knutg5");
+        attr(video, "class", "svelte-zi5z1m");
       },
-      m(target2, anchor) {
-        insert(target2, video, anchor);
+      m(target, anchor) {
+        insert(target, video, anchor);
       },
       p(ctx2, dirty) {
         if (dirty & /*movie*/
@@ -885,7 +899,7 @@
   function create_pending_block$1(ctx) {
     return { c: noop, m: noop, p: noop, d: noop };
   }
-  function create_if_block$2(ctx) {
+  function create_if_block$1(ctx) {
     let a;
     let t_value = (
       /*movie*/
@@ -897,13 +911,13 @@
       c() {
         a = element("a");
         t = text(t_value);
-        attr(a, "class", "maker svelte-knutg5");
+        attr(a, "class", "maker svelte-zi5z1m");
         attr(a, "href", a_href_value = /*movie*/
         ctx[0].makerUrl);
         attr(a, "rel", "noopener");
       },
-      m(target2, anchor) {
-        insert(target2, a, anchor);
+      m(target, anchor) {
+        insert(target, a, anchor);
         append(a, t);
       },
       p(ctx2, dirty) {
@@ -934,24 +948,25 @@
     let t0;
     let t1;
     let span;
-    let t2_value = (
+    let t2;
+    let t3_value = (
       /*movie*/
       ctx[0].code + ""
     );
-    let t2;
     let t3;
+    let t4;
     let div3;
     let a;
-    let t4_value = (
+    let t5_value = (
       /*movie*/
       ctx[0].title + ""
     );
-    let t4;
+    let t5;
     let a_href_value;
     let a_title_value;
-    let t5;
-    let div2;
     let t6;
+    let div2;
+    let t7;
     let resources;
     let current;
     let mounted;
@@ -962,7 +977,7 @@
     );
     let if_block1 = (
       /*movie*/
-      ctx[0].maker && create_if_block$2(ctx)
+      ctx[0].maker && create_if_block$1(ctx)
     );
     resources = new Resources({
       props: {
@@ -994,36 +1009,40 @@
         if (if_block0) if_block0.c();
         t1 = space();
         span = element("span");
-        t2 = text(t2_value);
-        t3 = space();
+        t2 = text("FC2-PPV-");
+        t3 = text(t3_value);
+        t4 = space();
         div3 = element("div");
         a = element("a");
-        t4 = text(t4_value);
-        t5 = space();
+        t5 = text(t5_value);
+        t6 = space();
         div2 = element("div");
         if (if_block1) if_block1.c();
-        t6 = space();
+        t7 = space();
         create_component(resources.$$.fragment);
         if (!src_url_equal(img.src, img_src_value = /*movie*/
         ctx[0].thumbnail)) attr(img, "src", img_src_value);
         attr(img, "alt", img_alt_value = /*movie*/
         ctx[0].title);
         attr(img, "loading", "lazy");
-        attr(img, "class", "svelte-knutg5");
-        attr(span, "class", "code svelte-knutg5");
-        attr(div1, "class", "grid-item svelte-knutg5");
-        attr(a, "class", "title svelte-knutg5");
+        attr(img, "class", "svelte-zi5z1m");
+        attr(span, "class", "code svelte-zi5z1m");
+        attr(div1, "class", "grid-item svelte-zi5z1m");
+        attr(a, "class", "title svelte-zi5z1m");
         attr(a, "href", a_href_value = /*movie*/
         ctx[0].titleUrl);
         attr(a, "title", a_title_value = /*movie*/
         ctx[0].title);
         attr(a, "rel", "noopener");
-        attr(div2, "class", "flex svelte-knutg5");
-        attr(div3, "class", "grid-item-title svelte-knutg5");
-        attr(div4, "class", "grid-item-wrapper svelte-knutg5");
+        attr(div2, "class", "flex svelte-zi5z1m");
+        attr(div3, "class", "grid-item-title svelte-zi5z1m");
+        attr(div4, "class", "grid-item-wrapper svelte-zi5z1m");
+        set_style(div4, "filter", "brightness(" + /*torrentDataArray*/
+        (ctx[1][0] ? "1" : "0.5") + ")");
+        set_style(div4, "transition", "filter 0.3s ease-in-out");
       },
-      m(target2, anchor) {
-        insert(target2, div4, anchor);
+      m(target, anchor) {
+        insert(target, div4, anchor);
         append(div4, div1);
         append(div1, div0);
         append(div0, img);
@@ -1032,14 +1051,15 @@
         append(div1, t1);
         append(div1, span);
         append(span, t2);
-        append(div4, t3);
+        append(span, t3);
+        append(div4, t4);
         append(div4, div3);
         append(div3, a);
-        append(a, t4);
-        append(div3, t5);
+        append(a, t5);
+        append(div3, t6);
         append(div3, div2);
         if (if_block1) if_block1.m(div2, null);
-        append(div2, t6);
+        append(div2, t7);
         mount_component(resources, div2, null);
         current = true;
         if (!mounted) {
@@ -1095,11 +1115,11 @@
           if_block0 = null;
         }
         if ((!current || dirty & /*movie*/
-        1) && t2_value !== (t2_value = /*movie*/
-        ctx2[0].code + "")) set_data(t2, t2_value);
+        1) && t3_value !== (t3_value = /*movie*/
+        ctx2[0].code + "")) set_data(t3, t3_value);
         if ((!current || dirty & /*movie*/
-        1) && t4_value !== (t4_value = /*movie*/
-        ctx2[0].title + "")) set_data(t4, t4_value);
+        1) && t5_value !== (t5_value = /*movie*/
+        ctx2[0].title + "")) set_data(t5, t5_value);
         if (!current || dirty & /*movie*/
         1 && a_href_value !== (a_href_value = /*movie*/
         ctx2[0].titleUrl)) {
@@ -1117,9 +1137,9 @@
           if (if_block1) {
             if_block1.p(ctx2, dirty);
           } else {
-            if_block1 = create_if_block$2(ctx2);
+            if_block1 = create_if_block$1(ctx2);
             if_block1.c();
-            if_block1.m(div2, t6);
+            if_block1.m(div2, t7);
           }
         } else if (if_block1) {
           if_block1.d(1);
@@ -1139,6 +1159,11 @@
         2) resources_changes.seed = /*torrentDataArray*/
         ((_c2 = ctx2[1][0]) == null ? void 0 : _c2.seed) ?? null;
         resources.$set(resources_changes);
+        if (!current || dirty & /*torrentDataArray*/
+        2) {
+          set_style(div4, "filter", "brightness(" + /*torrentDataArray*/
+          (ctx2[1][0] ? "1" : "0.5") + ")");
+        }
       },
       i(local) {
         if (current) return;
@@ -1193,7 +1218,6 @@
       return Promise.resolve(sukebeiCache[url]);
     }
     const newUrl = `https://sukebei.nyaa.si/?f=0&c=0_0&q=${url}&s=seeders&o=desc`;
-    console.log(`Requesting ${newUrl}`);
     return new Promise((resolve, reject) => {
       _GM_xmlhttpRequest({
         url: newUrl,
@@ -1222,7 +1246,71 @@
     child_ctx[4] = list[i];
     return child_ctx;
   }
-  function create_else_block$1(ctx) {
+  function create_each_block(ctx) {
+    let movielistpage;
+    let current;
+    function func(...args) {
+      return (
+        /*func*/
+        ctx[2](
+          /*movie*/
+          ctx[4],
+          ...args
+        )
+      );
+    }
+    movielistpage = new MovieList({
+      props: {
+        movie: (
+          /*movie*/
+          ctx[4]
+        ),
+        torrentDataArray: (
+          /*torrentDataArray*/
+          ctx[1].filter(func).map(
+            /*func_1*/
+            ctx[3]
+          ) || null
+        )
+      }
+    });
+    return {
+      c() {
+        create_component(movielistpage.$$.fragment);
+      },
+      m(target, anchor) {
+        mount_component(movielistpage, target, anchor);
+        current = true;
+      },
+      p(new_ctx, dirty) {
+        ctx = new_ctx;
+        const movielistpage_changes = {};
+        if (dirty & /*movieList*/
+        1) movielistpage_changes.movie = /*movie*/
+        ctx[4];
+        if (dirty & /*torrentDataArray, movieList*/
+        3) movielistpage_changes.torrentDataArray = /*torrentDataArray*/
+        ctx[1].filter(func).map(
+          /*func_1*/
+          ctx[3]
+        ) || null;
+        movielistpage.$set(movielistpage_changes);
+      },
+      i(local) {
+        if (current) return;
+        transition_in(movielistpage.$$.fragment, local);
+        current = true;
+      },
+      o(local) {
+        transition_out(movielistpage.$$.fragment, local);
+        current = false;
+      },
+      d(detaching) {
+        destroy_component(movielistpage, detaching);
+      }
+    };
+  }
+  function create_fragment$1(ctx) {
     let div;
     let current;
     let each_value = ensure_array_like(
@@ -1242,10 +1330,10 @@
         for (let i = 0; i < each_blocks.length; i += 1) {
           each_blocks[i].c();
         }
-        attr(div, "class", "grid-container svelte-yp0c0n");
+        attr(div, "class", "grid-container svelte-6wm1x2");
       },
-      m(target2, anchor) {
-        insert(target2, div, anchor);
+      m(target, anchor) {
+        insert(target, div, anchor);
         for (let i = 0; i < each_blocks.length; i += 1) {
           if (each_blocks[i]) {
             each_blocks[i].m(div, null);
@@ -1253,7 +1341,7 @@
         }
         current = true;
       },
-      p(ctx2, dirty) {
+      p(ctx2, [dirty]) {
         if (dirty & /*movieList, torrentDataArray, parseInt*/
         3) {
           each_value = ensure_array_like(
@@ -1302,157 +1390,7 @@
       }
     };
   }
-  function create_if_block$1(ctx) {
-    let div;
-    return {
-      c() {
-        div = element("div");
-        div.textContent = "Loading...";
-        attr(div, "class", "loading svelte-yp0c0n");
-      },
-      m(target2, anchor) {
-        insert(target2, div, anchor);
-      },
-      p: noop,
-      i: noop,
-      o: noop,
-      d(detaching) {
-        if (detaching) {
-          detach(div);
-        }
-      }
-    };
-  }
-  function create_each_block(ctx) {
-    let movielistpage;
-    let current;
-    function func(...args) {
-      return (
-        /*func*/
-        ctx[2](
-          /*movie*/
-          ctx[4],
-          ...args
-        )
-      );
-    }
-    movielistpage = new MovieList({
-      props: {
-        movie: (
-          /*movie*/
-          ctx[4]
-        ),
-        torrentDataArray: (
-          /*torrentDataArray*/
-          ctx[1].filter(func).map(
-            /*func_1*/
-            ctx[3]
-          )
-        )
-      }
-    });
-    return {
-      c() {
-        create_component(movielistpage.$$.fragment);
-      },
-      m(target2, anchor) {
-        mount_component(movielistpage, target2, anchor);
-        current = true;
-      },
-      p(new_ctx, dirty) {
-        ctx = new_ctx;
-        const movielistpage_changes = {};
-        if (dirty & /*movieList*/
-        1) movielistpage_changes.movie = /*movie*/
-        ctx[4];
-        if (dirty & /*torrentDataArray, movieList*/
-        3) movielistpage_changes.torrentDataArray = /*torrentDataArray*/
-        ctx[1].filter(func).map(
-          /*func_1*/
-          ctx[3]
-        );
-        movielistpage.$set(movielistpage_changes);
-      },
-      i(local) {
-        if (current) return;
-        transition_in(movielistpage.$$.fragment, local);
-        current = true;
-      },
-      o(local) {
-        transition_out(movielistpage.$$.fragment, local);
-        current = false;
-      },
-      d(detaching) {
-        destroy_component(movielistpage, detaching);
-      }
-    };
-  }
-  function create_fragment$1(ctx) {
-    let current_block_type_index;
-    let if_block;
-    let if_block_anchor;
-    let current;
-    const if_block_creators = [create_if_block$1, create_else_block$1];
-    const if_blocks = [];
-    function select_block_type(ctx2, dirty) {
-      if (
-        /*movieList*/
-        ctx2[0].length === 0
-      ) return 0;
-      return 1;
-    }
-    current_block_type_index = select_block_type(ctx);
-    if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
-    return {
-      c() {
-        if_block.c();
-        if_block_anchor = empty();
-      },
-      m(target2, anchor) {
-        if_blocks[current_block_type_index].m(target2, anchor);
-        insert(target2, if_block_anchor, anchor);
-        current = true;
-      },
-      p(ctx2, [dirty]) {
-        let previous_block_index = current_block_type_index;
-        current_block_type_index = select_block_type(ctx2);
-        if (current_block_type_index === previous_block_index) {
-          if_blocks[current_block_type_index].p(ctx2, dirty);
-        } else {
-          group_outros();
-          transition_out(if_blocks[previous_block_index], 1, 1, () => {
-            if_blocks[previous_block_index] = null;
-          });
-          check_outros();
-          if_block = if_blocks[current_block_type_index];
-          if (!if_block) {
-            if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx2);
-            if_block.c();
-          } else {
-            if_block.p(ctx2, dirty);
-          }
-          transition_in(if_block, 1);
-          if_block.m(if_block_anchor.parentNode, if_block_anchor);
-        }
-      },
-      i(local) {
-        if (current) return;
-        transition_in(if_block);
-        current = true;
-      },
-      o(local) {
-        transition_out(if_block);
-        current = false;
-      },
-      d(detaching) {
-        if (detaching) {
-          detach(if_block_anchor);
-        }
-        if_blocks[current_block_type_index].d(detaching);
-      }
-    };
-  }
-  const CHUNK_SIZE = 20;
+  const CHUNK_SIZE = 30;
   function instance$1($$self, $$props, $$invalidate) {
     let movieList = [];
     let torrentDataArray = [];
@@ -1465,6 +1403,7 @@
       }
       const results = await Promise.all(chunks.map(getTorrentDataFromSukebei));
       $$invalidate(1, torrentDataArray = results.flat());
+      console.log("Torrent data array:", torrentDataArray);
     });
     const func = (movie, data) => data.title.includes(movie.code);
     const func_1 = (data) => ({
@@ -1480,10 +1419,10 @@
     }
   }
   function getMovieDetail() {
-    const $El2 = $("div.flex.flex-col.items-start.rounded-lg");
+    const $El = $("div.flex.flex-col.items-start.rounded-lg");
     const movieDetail = {
-      code: $El2.find("span.text-white.ml-2").first().text(),
-      thumbnail: $El2.find("img").first().attr("src")
+      code: $El.find("span.text-white.ml-2").first().text(),
+      thumbnail: $El.find("img").first().attr("src")
     };
     return movieDetail;
   }
@@ -1506,9 +1445,9 @@
         await_block_anchor = empty();
         info.block.c();
       },
-      m(target2, anchor) {
-        insert(target2, await_block_anchor, anchor);
-        info.block.m(target2, info.anchor = anchor);
+      m(target, anchor) {
+        insert(target, await_block_anchor, anchor);
+        info.block.m(target, info.anchor = anchor);
         info.mount = () => await_block_anchor.parentNode;
         info.anchor = await_block_anchor;
       },
@@ -1545,9 +1484,9 @@
         if_block.c();
         if_block_anchor = empty();
       },
-      m(target2, anchor) {
-        if_block.m(target2, anchor);
-        insert(target2, if_block_anchor, anchor);
+      m(target, anchor) {
+        if_block.m(target, anchor);
+        insert(target, if_block_anchor, anchor);
       },
       p(ctx2, dirty) {
         if_block.p(ctx2, dirty);
@@ -1568,8 +1507,8 @@
         p.textContent = "No Preview 😭";
         attr(p, "class", "no-video svelte-1jfd2dh");
       },
-      m(target2, anchor) {
-        insert(target2, p, anchor);
+      m(target, anchor) {
+        insert(target, p, anchor);
       },
       p: noop,
       d(detaching) {
@@ -1591,8 +1530,8 @@
         video.loop = true;
         attr(video, "class", "svelte-1jfd2dh");
       },
-      m(target2, anchor) {
-        insert(target2, video, anchor);
+      m(target, anchor) {
+        insert(target, video, anchor);
       },
       p: noop,
       d(detaching) {
@@ -1632,8 +1571,8 @@
       c() {
         create_component(resources.$$.fragment);
       },
-      m(target2, anchor) {
-        mount_component(resources, target2, anchor);
+      m(target, anchor) {
+        mount_component(resources, target, anchor);
         current = true;
       },
       p(ctx2, dirty) {
@@ -1701,14 +1640,14 @@
         attr(img, "class", "svelte-1jfd2dh");
         attr(div, "class", "svelte-1jfd2dh");
       },
-      m(target2, anchor) {
-        insert(target2, div, anchor);
+      m(target, anchor) {
+        insert(target, div, anchor);
         append(div, img);
         append(div, t0);
         if (if_block0) if_block0.m(div, null);
-        insert(target2, t1, anchor);
-        if (if_block1) if_block1.m(target2, anchor);
-        insert(target2, if_block1_anchor, anchor);
+        insert(target, t1, anchor);
+        if (if_block1) if_block1.m(target, anchor);
+        insert(target, if_block1_anchor, anchor);
         current = true;
         if (!mounted) {
           dispose = [
@@ -1822,23 +1761,31 @@
       init(this, options, instance, create_fragment, safe_not_equal, {});
     }
   }
-  const target = document.querySelector("div.flex.flex-wrap.-m-4");
-  if (target) {
+  try {
+    const target = document.querySelector("div.flex.flex-wrap.-m-4");
     new Movies({
       target: target.parentNode.insertBefore(document.createElement("div"), target)
     });
     target.remove();
-  } else {
+  } catch (error) {
     console.error("Target element for Movies not found.");
   }
-  const $El = document.querySelector("div.flex.flex-col.items-start.rounded-lg > div > a > img").parentElement;
-  if ($El) {
+  try {
+    const $El = document.querySelector("div.flex.flex-col.items-start.rounded-lg > div > a > img").parentElement;
     new MovieDetail({
       target: $El.parentNode.insertBefore(document.createElement("div"), $El)
     });
     $El.remove();
-  } else {
+  } catch (error) {
     console.error("Target element for MovieDetail not found.");
+  }
+  try {
+    const containerEl = document.querySelector("div.container");
+    if (containerEl) {
+      containerEl.classList.remove("container");
+    }
+  } catch (error) {
+    console.error("Container element not found.");
   }
 
 })(jQuery);
