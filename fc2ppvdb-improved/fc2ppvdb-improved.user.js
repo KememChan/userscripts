@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       fc2ppvdb-improved
 // @namespace  fc2ppvdb.com-improved
-// @version    1.0.2
+// @version    1.0.3
 // @author     KememChan
 // @icon       https://www.google.com/s2/favicons?sz=32&domain_url=https%3A%2F%2Ffc2ppvdb.com%2Farticles%2F4558488
 // @match      https://fc2ppvdb.com/*
@@ -10,7 +10,7 @@
 // @grant      GM_xmlhttpRequest
 // ==/UserScript==
 
-(e=>{if(typeof GM_addStyle=="function"){GM_addStyle(e);return}const t=document.createElement("style");t.textContent=e,document.head.append(t)})(' @import"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";.resources.svelte-mhmjd3.svelte-mhmjd3{display:flex;justify-content:flex-end;gap:5px;list-style-type:none}.resources.svelte-mhmjd3>.svelte-mhmjd3{transition:transform .3s ease-in-out,color .3s ease-in-out;color:#fff}.seed.svelte-mhmjd3.svelte-mhmjd3{color:#adff2f;transition:all .3s ease-in-out}.resources.svelte-mhmjd3>.svelte-mhmjd3:hover{color:#0f0}.grid-item-wrapper.svelte-zi5z1m.svelte-zi5z1m{transition:transform .3s ease-in-out,filter .3s ease-in-out;will-change:transform,filter}.grid-item-wrapper.svelte-zi5z1m.svelte-zi5z1m:hover{animation:none;transform:scale(1.05)}.grid-item.svelte-zi5z1m.svelte-zi5z1m{position:relative;width:100%;padding-top:56.25%;overflow:hidden;transition:transform .3s ease-in-out;will-change:transform}.grid-item.svelte-zi5z1m.svelte-zi5z1m:hover{animation:none;transform:scale(1.02)}.grid-item.svelte-zi5z1m img.svelte-zi5z1m{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background-color:#1f2937;transition:filter .3s ease-in-out;will-change:filter}.grid-item.svelte-zi5z1m:hover img.svelte-zi5z1m{animation:none;filter:blur(2px) brightness(.5)}video.svelte-zi5z1m.svelte-zi5z1m{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain}.code.svelte-zi5z1m.svelte-zi5z1m{color:#fff;position:absolute;top:0;background-color:#1f2937e6;padding:5px;font-size:.8rem}.no-video.svelte-zi5z1m.svelte-zi5z1m{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:1.2rem;padding:10px;background-color:#000c;border-radius:8px;color:#fff;opacity:0;animation:svelte-zi5z1m-popup .3s ease-in-out forwards;will-change:transform,opacity}.flex.svelte-zi5z1m.svelte-zi5z1m{display:flex;justify-content:space-between;align-items:center;transition:transform .3s ease-in-out}.grid-item-title.svelte-zi5z1m.svelte-zi5z1m{color:#fff;font-size:14px;margin-top:5px;width:100%;transition:transform .3s ease-in-out}.title.svelte-zi5z1m.svelte-zi5z1m{overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical}.maker.svelte-zi5z1m.svelte-zi5z1m{color:#6495ed;transition:color .3s ease-in-out,transform .3s ease-in-out}.maker.svelte-zi5z1m.svelte-zi5z1m:hover{color:#1e90ff;transform:scale(1.1)}@keyframes svelte-zi5z1m-popup{0%{opacity:0;transform:translate(-50%,-50%) scale(.8)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}@keyframes svelte-zi5z1m-flash{0%{background-color:#1f2937e6}50%{background-color:#333333e6}to{background-color:#1f2937e6}}@keyframes svelte-zi5z1m-blur{0%{filter:blur(0) brightness(1)}50%{filter:blur(1px) brightness(.7)}to{filter:blur(2px) brightness(.5)}}@keyframes svelte-zi5z1m-scale{0%{transform:scale(1)}50%{transform:scale(1.02)}to{transform:scale(1.05)}}.grid-container.svelte-6wm1x2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;padding:2rem;margin:0 auto;animation:svelte-6wm1x2-fadeIn 1s ease-out forwards}@media (min-width: 2000px){.grid-container.svelte-6wm1x2{grid-template-columns:repeat(5,1fr);font-size:.9em}}@media (max-width: 1600px){.grid-container.svelte-6wm1x2{grid-template-columns:repeat(4,1fr);font-size:.85em}}@media (max-width: 1200px){.grid-container.svelte-6wm1x2{grid-template-columns:repeat(3,1fr);gap:1.2rem;padding:1.5rem;font-size:.8em}}@media (max-width: 900px){.grid-container.svelte-6wm1x2{grid-template-columns:repeat(2,1fr);gap:1rem;padding:1rem;font-size:.75em}}@media (max-width: 600px){.grid-container.svelte-6wm1x2{grid-template-columns:1fr;gap:.8rem;padding:.8rem;font-size:.7em}}@keyframes svelte-6wm1x2-fadeIn{0%{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}div.svelte-1jfd2dh{display:inline-block;position:relative;width:100%;height:0;padding-top:56.25%;overflow:hidden}img.svelte-1jfd2dh,video.svelte-1jfd2dh{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;transition:filter .3s ease-in-out;background-color:#000}img.svelte-1jfd2dh:hover{filter:brightness(.5)}.no-video.svelte-1jfd2dh{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:1.5rem} ');
+(e=>{if(typeof GM_addStyle=="function"){GM_addStyle(e);return}const t=document.createElement("style");t.textContent=e,document.head.append(t)})(' @import"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";.resources.svelte-mhmjd3.svelte-mhmjd3{display:flex;justify-content:flex-end;gap:5px;list-style-type:none}.resources.svelte-mhmjd3>.svelte-mhmjd3{transition:transform .3s ease-in-out,color .3s ease-in-out;color:#fff}.seed.svelte-mhmjd3.svelte-mhmjd3{color:#adff2f;transition:all .3s ease-in-out}.resources.svelte-mhmjd3>.svelte-mhmjd3:hover{color:#0f0}.grid-item-wrapper.svelte-zi5z1m.svelte-zi5z1m{transition:transform .3s ease-in-out,filter .3s ease-in-out;will-change:transform,filter}.grid-item-wrapper.svelte-zi5z1m.svelte-zi5z1m:hover{animation:none;transform:scale(1.05)}.grid-item.svelte-zi5z1m.svelte-zi5z1m{position:relative;width:100%;padding-top:56.25%;overflow:hidden;transition:transform .3s ease-in-out;will-change:transform}.grid-item.svelte-zi5z1m.svelte-zi5z1m:hover{animation:none;transform:scale(1.02)}.grid-item.svelte-zi5z1m img.svelte-zi5z1m{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background-color:#1f2937;transition:filter .3s ease-in-out;will-change:filter}.grid-item.svelte-zi5z1m:hover img.svelte-zi5z1m{animation:none;filter:blur(2px) brightness(.5)}video.svelte-zi5z1m.svelte-zi5z1m{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain}.code.svelte-zi5z1m.svelte-zi5z1m{color:#fff;position:absolute;top:0;background-color:#1f2937e6;padding:5px;font-size:.8rem}.no-video.svelte-zi5z1m.svelte-zi5z1m{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:1.2rem;padding:10px;background-color:#000c;border-radius:8px;color:#fff;opacity:0;animation:svelte-zi5z1m-popup .3s ease-in-out forwards;will-change:transform,opacity}.flex.svelte-zi5z1m.svelte-zi5z1m{display:flex;justify-content:space-between;align-items:center;transition:transform .3s ease-in-out}.grid-item-title.svelte-zi5z1m.svelte-zi5z1m{color:#fff;font-size:14px;margin-top:5px;width:100%;transition:transform .3s ease-in-out}.title.svelte-zi5z1m.svelte-zi5z1m{overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical}.maker.svelte-zi5z1m.svelte-zi5z1m{color:#6495ed;transition:color .3s ease-in-out,transform .3s ease-in-out}.maker.svelte-zi5z1m.svelte-zi5z1m:hover{color:#1e90ff;transform:scale(1.1)}@keyframes svelte-zi5z1m-popup{0%{opacity:0;transform:translate(-50%,-50%) scale(.8)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}@keyframes svelte-zi5z1m-flash{0%{background-color:#1f2937e6}50%{background-color:#333333e6}to{background-color:#1f2937e6}}@keyframes svelte-zi5z1m-blur{0%{filter:blur(0) brightness(1)}50%{filter:blur(1px) brightness(.7)}to{filter:blur(2px) brightness(.5)}}@keyframes svelte-zi5z1m-scale{0%{transform:scale(1)}50%{transform:scale(1.02)}to{transform:scale(1.05)}}.grid-container.svelte-y69kqa{display:grid;grid-template-columns:repeat(4,minmax(300px,1fr));gap:1rem;margin:0 auto;animation:svelte-y69kqa-fadeIn 1s ease-out forwards}@media (min-width: 2000px){.grid-container.svelte-y69kqa{grid-template-columns:repeat(5,1fr);font-size:.9em}}@media (max-width: 1600px){.grid-container.svelte-y69kqa{grid-template-columns:repeat(4,1fr);font-size:.85em}}@media (max-width: 1200px){.grid-container.svelte-y69kqa{grid-template-columns:repeat(3,1fr);font-size:.8em}}@media (max-width: 900px){.grid-container.svelte-y69kqa{grid-template-columns:repeat(2,1fr);font-size:.75em}}@media (max-width: 600px){.grid-container.svelte-y69kqa{grid-template-columns:1fr;font-size:.7em}}@keyframes svelte-y69kqa-fadeIn{0%{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}div.svelte-we16u3{display:inline-block;position:relative;width:100%;height:0;padding-top:56.25%;overflow:hidden}img.svelte-we16u3,video.svelte-we16u3{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;transition:filter .3s ease-in-out;background-color:#1f2937}img.svelte-we16u3:hover{filter:brightness(.5)}.no-video.svelte-we16u3{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:1.5rem} ');
 
 (function ($) {
   'use strict';
@@ -756,7 +756,7 @@
       init(this, options, instance$3, create_fragment$3, safe_not_equal, { code: 0, torrent: 1, magnet: 2, seed: 3 });
     }
   }
-  function create_if_block_1$1(ctx) {
+  function create_if_block$1(ctx) {
     let await_block_anchor;
     let promise;
     let info = {
@@ -811,7 +811,7 @@
       if (
         /*videoPreview*/
         ctx2[6]
-      ) return create_if_block_2$1;
+      ) return create_if_block_1$1;
       return create_else_block$1;
     }
     let current_block_type = select_block_type(ctx);
@@ -864,7 +864,7 @@
       }
     };
   }
-  function create_if_block_2$1(ctx) {
+  function create_if_block_1$1(ctx) {
     let video;
     let video_src_value;
     return {
@@ -899,44 +899,6 @@
   function create_pending_block$1(ctx) {
     return { c: noop, m: noop, p: noop, d: noop };
   }
-  function create_if_block$1(ctx) {
-    let a;
-    let t_value = (
-      /*movie*/
-      ctx[0].maker + ""
-    );
-    let t;
-    let a_href_value;
-    return {
-      c() {
-        a = element("a");
-        t = text(t_value);
-        attr(a, "class", "maker svelte-zi5z1m");
-        attr(a, "href", a_href_value = /*movie*/
-        ctx[0].makerUrl);
-        attr(a, "rel", "noopener");
-      },
-      m(target, anchor) {
-        insert(target, a, anchor);
-        append(a, t);
-      },
-      p(ctx2, dirty) {
-        if (dirty & /*movie*/
-        1 && t_value !== (t_value = /*movie*/
-        ctx2[0].maker + "")) set_data(t, t_value);
-        if (dirty & /*movie*/
-        1 && a_href_value !== (a_href_value = /*movie*/
-        ctx2[0].makerUrl)) {
-          attr(a, "href", a_href_value);
-        }
-      },
-      d(detaching) {
-        if (detaching) {
-          detach(a);
-        }
-      }
-    };
-  }
   function create_fragment$2(ctx) {
     var _a, _b, _c;
     let div4;
@@ -956,28 +918,31 @@
     let t3;
     let t4;
     let div3;
-    let a;
+    let a0;
     let t5_value = (
       /*movie*/
       ctx[0].title + ""
     );
     let t5;
-    let a_href_value;
-    let a_title_value;
+    let a0_href_value;
+    let a0_title_value;
     let t6;
     let div2;
+    let a1;
+    let t7_value = (
+      /*movie*/
+      ctx[0].maker + ""
+    );
     let t7;
+    let a1_href_value;
+    let t8;
     let resources;
     let current;
     let mounted;
     let dispose;
-    let if_block0 = (
+    let if_block = (
       /*mouseHover*/
-      ctx[2] && create_if_block_1$1(ctx)
-    );
-    let if_block1 = (
-      /*movie*/
-      ctx[0].maker && create_if_block$1(ctx)
+      ctx[2] && create_if_block$1(ctx)
     );
     resources = new Resources({
       props: {
@@ -1006,19 +971,20 @@
         div0 = element("div");
         img = element("img");
         t0 = space();
-        if (if_block0) if_block0.c();
+        if (if_block) if_block.c();
         t1 = space();
         span = element("span");
         t2 = text("FC2-PPV-");
         t3 = text(t3_value);
         t4 = space();
         div3 = element("div");
-        a = element("a");
+        a0 = element("a");
         t5 = text(t5_value);
         t6 = space();
         div2 = element("div");
-        if (if_block1) if_block1.c();
-        t7 = space();
+        a1 = element("a");
+        t7 = text(t7_value);
+        t8 = space();
         create_component(resources.$$.fragment);
         if (!src_url_equal(img.src, img_src_value = /*movie*/
         ctx[0].thumbnail)) attr(img, "src", img_src_value);
@@ -1028,12 +994,16 @@
         attr(img, "class", "svelte-zi5z1m");
         attr(span, "class", "code svelte-zi5z1m");
         attr(div1, "class", "grid-item svelte-zi5z1m");
-        attr(a, "class", "title svelte-zi5z1m");
-        attr(a, "href", a_href_value = /*movie*/
+        attr(a0, "class", "title svelte-zi5z1m");
+        attr(a0, "href", a0_href_value = /*movie*/
         ctx[0].titleUrl);
-        attr(a, "title", a_title_value = /*movie*/
+        attr(a0, "title", a0_title_value = /*movie*/
         ctx[0].title);
-        attr(a, "rel", "noopener");
+        attr(a0, "rel", "noopener");
+        attr(a1, "class", "maker svelte-zi5z1m");
+        attr(a1, "href", a1_href_value = /*movie*/
+        ctx[0].makerUrl);
+        attr(a1, "rel", "noopener");
         attr(div2, "class", "flex svelte-zi5z1m");
         attr(div3, "class", "grid-item-title svelte-zi5z1m");
         attr(div4, "class", "grid-item-wrapper svelte-zi5z1m");
@@ -1047,19 +1017,20 @@
         append(div1, div0);
         append(div0, img);
         append(div0, t0);
-        if (if_block0) if_block0.m(div0, null);
+        if (if_block) if_block.m(div0, null);
         append(div1, t1);
         append(div1, span);
         append(span, t2);
         append(span, t3);
         append(div4, t4);
         append(div4, div3);
-        append(div3, a);
-        append(a, t5);
+        append(div3, a0);
+        append(a0, t5);
         append(div3, t6);
         append(div3, div2);
-        if (if_block1) if_block1.m(div2, null);
-        append(div2, t7);
+        append(div2, a1);
+        append(a1, t7);
+        append(div2, t8);
         mount_component(resources, div2, null);
         current = true;
         if (!mounted) {
@@ -1103,16 +1074,16 @@
           /*mouseHover*/
           ctx2[2]
         ) {
-          if (if_block0) {
-            if_block0.p(ctx2, dirty);
+          if (if_block) {
+            if_block.p(ctx2, dirty);
           } else {
-            if_block0 = create_if_block_1$1(ctx2);
-            if_block0.c();
-            if_block0.m(div0, null);
+            if_block = create_if_block$1(ctx2);
+            if_block.c();
+            if_block.m(div0, null);
           }
-        } else if (if_block0) {
-          if_block0.d(1);
-          if_block0 = null;
+        } else if (if_block) {
+          if_block.d(1);
+          if_block = null;
         }
         if ((!current || dirty & /*movie*/
         1) && t3_value !== (t3_value = /*movie*/
@@ -1121,29 +1092,22 @@
         1) && t5_value !== (t5_value = /*movie*/
         ctx2[0].title + "")) set_data(t5, t5_value);
         if (!current || dirty & /*movie*/
-        1 && a_href_value !== (a_href_value = /*movie*/
+        1 && a0_href_value !== (a0_href_value = /*movie*/
         ctx2[0].titleUrl)) {
-          attr(a, "href", a_href_value);
+          attr(a0, "href", a0_href_value);
         }
         if (!current || dirty & /*movie*/
-        1 && a_title_value !== (a_title_value = /*movie*/
+        1 && a0_title_value !== (a0_title_value = /*movie*/
         ctx2[0].title)) {
-          attr(a, "title", a_title_value);
+          attr(a0, "title", a0_title_value);
         }
-        if (
-          /*movie*/
-          ctx2[0].maker
-        ) {
-          if (if_block1) {
-            if_block1.p(ctx2, dirty);
-          } else {
-            if_block1 = create_if_block$1(ctx2);
-            if_block1.c();
-            if_block1.m(div2, t7);
-          }
-        } else if (if_block1) {
-          if_block1.d(1);
-          if_block1 = null;
+        if ((!current || dirty & /*movie*/
+        1) && t7_value !== (t7_value = /*movie*/
+        ctx2[0].maker + "")) set_data(t7, t7_value);
+        if (!current || dirty & /*movie*/
+        1 && a1_href_value !== (a1_href_value = /*movie*/
+        ctx2[0].makerUrl)) {
+          attr(a1, "href", a1_href_value);
         }
         const resources_changes = {};
         if (dirty & /*movie*/
@@ -1178,8 +1142,7 @@
         if (detaching) {
           detach(div4);
         }
-        if (if_block0) if_block0.d();
-        if (if_block1) if_block1.d();
+        if (if_block) if_block.d();
         destroy_component(resources);
         mounted = false;
         run_all(dispose);
@@ -1330,7 +1293,7 @@
         for (let i = 0; i < each_blocks.length; i += 1) {
           each_blocks[i].c();
         }
-        attr(div, "class", "grid-container svelte-6wm1x2");
+        attr(div, "class", "grid-container svelte-y69kqa");
       },
       m(target, anchor) {
         insert(target, div, anchor);
@@ -1505,7 +1468,7 @@
       c() {
         p = element("p");
         p.textContent = "No Preview 😭";
-        attr(p, "class", "no-video svelte-1jfd2dh");
+        attr(p, "class", "no-video svelte-we16u3");
       },
       m(target, anchor) {
         insert(target, p, anchor);
@@ -1528,7 +1491,7 @@
         ctx[5])) attr(video, "src", video_src_value);
         video.autoplay = true;
         video.loop = true;
-        attr(video, "class", "svelte-1jfd2dh");
+        attr(video, "class", "svelte-we16u3");
       },
       m(target, anchor) {
         insert(target, video, anchor);
@@ -1637,8 +1600,8 @@
           /*movieDetail*/
           ctx[2].code
         );
-        attr(img, "class", "svelte-1jfd2dh");
-        attr(div, "class", "svelte-1jfd2dh");
+        attr(img, "class", "svelte-we16u3");
+        attr(div, "class", "svelte-we16u3");
       },
       m(target, anchor) {
         insert(target, div, anchor);
@@ -1761,31 +1724,32 @@
       init(this, options, instance, create_fragment, safe_not_equal, {});
     }
   }
-  try {
-    const target = document.querySelector("div.flex.flex-wrap.-m-4");
-    new Movies({
-      target: target.parentNode.insertBefore(document.createElement("div"), target)
-    });
-    target.remove();
-  } catch (error) {
-    console.error("Target element for Movies not found.");
-  }
-  try {
-    const $El = document.querySelector("div.flex.flex-col.items-start.rounded-lg > div > a > img").parentElement;
-    new MovieDetail({
-      target: $El.parentNode.insertBefore(document.createElement("div"), $El)
-    });
-    $El.remove();
-  } catch (error) {
-    console.error("Target element for MovieDetail not found.");
-  }
-  try {
-    const containerEl = document.querySelector("div.container");
-    if (containerEl) {
-      containerEl.classList.remove("container");
+  $(function() {
+    const moviesTarget = $("div.flex.flex-wrap.-m-4");
+    if (moviesTarget.length) {
+      const newDivMovies = $("<div>");
+      new Movies({
+        target: newDivMovies[0]
+      });
+      moviesTarget.replaceWith(newDivMovies);
     }
-  } catch (error) {
-    console.error("Container element not found.");
-  }
+    const movieDetailTarget = $("div.flex.flex-col.items-start.rounded-lg > div > a > img").parent();
+    if (movieDetailTarget.length) {
+      const newDivDetail = $("<div>");
+      new MovieDetail({
+        target: newDivDetail[0]
+      });
+      movieDetailTarget.replaceWith(newDivDetail);
+    }
+    const containerEl = $("div.container");
+    if (containerEl.length) {
+      containerEl.removeClass("container");
+    }
+    const idEl = $("span.text-white.ml-2").first();
+    if (idEl.length && /^\d+$/.test(idEl.text())) {
+      const originalText = idEl.text();
+      idEl.text("FC2-PPV-" + originalText);
+    }
+  });
 
 })(jQuery);
