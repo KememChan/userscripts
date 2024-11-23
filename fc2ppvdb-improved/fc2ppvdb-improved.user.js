@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       fc2ppvdb-improved
 // @namespace  fc2ppvdb.com-improved
-// @version    1.0.3
+// @version    1.0.3.1
 // @author     KememChan
 // @icon       https://www.google.com/s2/favicons?sz=32&domain_url=https%3A%2F%2Ffc2ppvdb.com%2Farticles%2F4558488
 // @match      https://fc2ppvdb.com/*
@@ -467,38 +467,44 @@
     (window.__svelte || (window.__svelte = { v: /* @__PURE__ */ new Set() })).v.add(PUBLIC_VERSION);
   var _GM_xmlhttpRequest = /* @__PURE__ */ (() => typeof GM_xmlhttpRequest != "undefined" ? GM_xmlhttpRequest : void 0)();
   const videoPreviewCache = {};
-  function getVideoPreviewFromNjav(url) {
+  async function getVideoPreview(code) {
+    const url = `https://123av.com/en/search?keyword=${code}`;
     if (videoPreviewCache[url] !== void 0) {
-      return Promise.resolve(videoPreviewCache[url]);
+      return videoPreviewCache[url];
     }
-    return new Promise((resolve, reject) => {
-      _GM_xmlhttpRequest({
-        url,
-        onload(response) {
-          const njavPage = $(response.responseText);
-          const movie = njavPage.find("div.col-6.col-sm-4.col-lg-3").first();
-          const videoPreview = movie.find("div.thumb").attr("data-preview");
-          if (videoPreview) {
-            _GM_xmlhttpRequest({
-              url: videoPreview,
-              responseType: "blob",
-              onload(r) {
-                const blobUrl = URL.createObjectURL(r.response);
-                videoPreviewCache[url] = blobUrl;
-                resolve(blobUrl);
-              }
-            });
-          } else {
-            videoPreviewCache[url] = null;
-            resolve(null);
-          }
-        },
-        onerror() {
-          videoPreviewCache[url] = null;
-          resolve(null);
-        }
+    try {
+      const responseText = await new Promise((resolve, reject) => {
+        _GM_xmlhttpRequest({
+          url,
+          method: "GET",
+          onload: (response) => resolve(response.responseText),
+          onerror: reject
+        });
       });
-    });
+      const $responseText = $(responseText);
+      const $gridFirst = $responseText.find("div.col-6.col-sm-4.col-lg-3").first();
+      const previewUrl = $gridFirst.find("div.thumb").attr("data-preview");
+      if (previewUrl) {
+        const previewBlob = await new Promise((resolve, reject) => {
+          _GM_xmlhttpRequest({
+            url: previewUrl,
+            responseType: "blob",
+            onload: (r) => resolve(r.response),
+            onerror: reject
+          });
+        });
+        const blobUrl = URL.createObjectURL(previewBlob);
+        videoPreviewCache[url] = blobUrl;
+        return blobUrl;
+      } else {
+        videoPreviewCache[url] = null;
+        return null;
+      }
+    } catch (error) {
+      console.error("Error fetching video preview:", error);
+      videoPreviewCache[url] = null;
+      return null;
+    }
   }
   function create_if_block$2(ctx) {
     let a0;
@@ -561,7 +567,7 @@
         attr(i1, "class", "fa-solid fa-globe");
         attr(i1, "aria-hidden", "true");
         attr(a1, "class", "njav svelte-mhmjd3");
-        attr(a1, "href", a1_href_value = "https://njav.tv/en/search?keyword=" + /*code*/
+        attr(a1, "href", a1_href_value = "https://123av.com/en/search?keyword=" + /*code*/
         ctx[0]);
         attr(a1, "target", "_blank");
         attr(a1, "rel", "noopener");
@@ -636,7 +642,7 @@
           attr(a0, "href", a0_href_value);
         }
         if (dirty & /*code*/
-        1 && a1_href_value !== (a1_href_value = "https://njav.tv/en/search?keyword=" + /*code*/
+        1 && a1_href_value !== (a1_href_value = "https://123av.com/en/search?keyword=" + /*code*/
         ctx2[0])) {
           attr(a1, "href", a1_href_value);
         }
@@ -769,8 +775,10 @@
       catch: create_catch_block$1,
       value: 6
     };
-    handle_promise(promise = getVideoPreviewFromNjav(`https://njav.tv/en/search?keyword=${/*movie*/
-  ctx[0].code}`), info);
+    handle_promise(promise = getVideoPreview(
+      /*movie*/
+      ctx[0].code
+    ), info);
     return {
       c() {
         await_block_anchor = empty();
@@ -786,8 +794,10 @@
         ctx = new_ctx;
         info.ctx = ctx;
         if (dirty & /*movie*/
-        1 && promise !== (promise = getVideoPreviewFromNjav(`https://njav.tv/en/search?keyword=${/*movie*/
-      ctx[0].code}`)) && handle_promise(promise, info)) ;
+        1 && promise !== (promise = getVideoPreview(
+          /*movie*/
+          ctx[0].code
+        )) && handle_promise(promise, info)) ;
         else {
           update_await_block_branch(info, ctx, dirty);
         }
@@ -1401,8 +1411,10 @@
       catch: create_catch_block,
       value: 5
     };
-    handle_promise(getVideoPreviewFromNjav(`https://njav.tv/en/search?keyword=${/*movieDetail*/
-  ctx[2].code}`), info);
+    handle_promise(getVideoPreview(
+      /*movieDetail*/
+      ctx[2].code
+    ), info);
     return {
       c() {
         await_block_anchor = empty();
