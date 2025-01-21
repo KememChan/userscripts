@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       fc2ppvdb-improved
 // @namespace  fc2ppvdb.com-improved
-// @version    1.0.3.1
+// @version    1.0.3.2
 // @author     KememChan
 // @icon       https://www.google.com/s2/favicons?sz=32&domain_url=https%3A%2F%2Ffc2ppvdb.com%2Farticles%2F4558488
 // @match      https://fc2ppvdb.com/*
@@ -22,14 +22,17 @@
     const movies = $("div.flex.flex-wrap.-m-4 > *");
     return await Promise.all(
       Array.from(movies).map(
-        async (movie) => ({
-          code: $(movie).find("span").first().text(),
-          thumbnail: $(movie).find("img").attr("data-src"),
-          title: $(movie).find("div.mt-1 a:eq(0)").text(),
-          titleUrl: $(movie).find("div.mt-1 a:eq(0)").attr("href"),
-          maker: $(movie).find("div.mt-1 a:eq(1)").text(),
-          makerUrl: $(movie).find("div.mt-1 a:eq(1)").attr("href")
-        })
+        async (movie) => {
+          var _a, _b, _c, _d;
+          return {
+            code: $(movie).find("span").first().text().trim() || "",
+            thumbnail: ((_a = $(movie).find("img").attr("data-src")) == null ? void 0 : _a.trim()) || ((_b = $(movie).find("img").attr("src")) == null ? void 0 : _b.trim()) || "",
+            title: $(movie).find("div.mt-1 a:eq(0)").text().trim() || "",
+            titleUrl: ((_c = $(movie).find("div.mt-1 a:eq(0)").attr("href")) == null ? void 0 : _c.trim()) || "",
+            maker: $(movie).find("div.mt-1 a:eq(1)").text().trim() || "",
+            makerUrl: ((_d = $(movie).find("div.mt-1 a:eq(1)").attr("href")) == null ? void 0 : _d.trim()) || ""
+          };
+        }
       )
     );
   }
@@ -559,7 +562,7 @@
         attr(i0, "class", "fa-solid fa-globe");
         attr(i0, "aria-hidden", "true");
         attr(a0, "class", "missav svelte-mhmjd3");
-        attr(a0, "href", a0_href_value = "https://missav.com/en/search/" + /*code*/
+        attr(a0, "href", a0_href_value = "https://missav.ws/en/search/" + /*code*/
         ctx[0]);
         attr(a0, "target", "_blank");
         attr(a0, "rel", "noopener");
@@ -637,7 +640,7 @@
       },
       p(ctx2, dirty) {
         if (dirty & /*code*/
-        1 && a0_href_value !== (a0_href_value = "https://missav.com/en/search/" + /*code*/
+        1 && a0_href_value !== (a0_href_value = "https://missav.ws/en/search/" + /*code*/
         ctx2[0])) {
           attr(a0, "href", a0_href_value);
         }
@@ -1736,7 +1739,7 @@
       init(this, options, instance, create_fragment, safe_not_equal, {});
     }
   }
-  $(function() {
+  const waitForMoviesTarget = () => {
     const moviesTarget = $("div.flex.flex-wrap.-m-4");
     if (moviesTarget.length) {
       const newDivMovies = $("<div>");
@@ -1744,24 +1747,29 @@
         target: newDivMovies[0]
       });
       moviesTarget.replaceWith(newDivMovies);
+    } else {
+      setTimeout(waitForMoviesTarget, 1e3);
     }
-    const movieDetailTarget = $("div.flex.flex-col.items-start.rounded-lg > div > a > img").parent();
-    if (movieDetailTarget.length) {
-      const newDivDetail = $("<div>");
-      new MovieDetail({
-        target: newDivDetail[0]
-      });
-      movieDetailTarget.replaceWith(newDivDetail);
-    }
-    const containerEl = $("div.container");
-    if (containerEl.length) {
-      containerEl.removeClass("container");
-    }
-    const idEl = $("span.text-white.ml-2").first();
-    if (idEl.length && /^\d+$/.test(idEl.text())) {
-      const originalText = idEl.text();
-      idEl.text("FC2-PPV-" + originalText);
-    }
-  });
+  };
+  waitForMoviesTarget();
+  const movieDetailTarget = $(
+    "div.flex.flex-col.items-start.rounded-lg > div > a > img"
+  ).parent();
+  if (movieDetailTarget.length) {
+    const newDivDetail = $("<div>");
+    new MovieDetail({
+      target: newDivDetail[0]
+    });
+    movieDetailTarget.replaceWith(newDivDetail);
+  }
+  const containerEl = $("div.container");
+  if (containerEl.length) {
+    containerEl.removeClass("container");
+  }
+  const idEl = $("span.text-white.ml-2").first();
+  if (idEl.length && /^\d+$/.test(idEl.text())) {
+    const originalText = idEl.text();
+    idEl.text("FC2-PPV-" + originalText);
+  }
 
 })(jQuery);
