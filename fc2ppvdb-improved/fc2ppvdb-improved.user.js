@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name       fc2ppvdb-improved
 // @namespace  fc2ppvdb.com-improved
-// @version    1.0.3.2
+// @version    1.0.4
 // @author     KememChan
 // @icon       https://www.google.com/s2/favicons?sz=32&domain_url=https%3A%2F%2Ffc2ppvdb.com%2Farticles%2F4558488
 // @match      https://fc2ppvdb.com/*
@@ -10,7 +10,7 @@
 // @grant      GM_xmlhttpRequest
 // ==/UserScript==
 
-(e=>{if(typeof GM_addStyle=="function"){GM_addStyle(e);return}const t=document.createElement("style");t.textContent=e,document.head.append(t)})(' @import"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";.resources.svelte-mhmjd3.svelte-mhmjd3{display:flex;justify-content:flex-end;gap:5px;list-style-type:none}.resources.svelte-mhmjd3>.svelte-mhmjd3{transition:transform .3s ease-in-out,color .3s ease-in-out;color:#fff}.seed.svelte-mhmjd3.svelte-mhmjd3{color:#adff2f;transition:all .3s ease-in-out}.resources.svelte-mhmjd3>.svelte-mhmjd3:hover{color:#0f0}.grid-item-wrapper.svelte-zi5z1m.svelte-zi5z1m{transition:transform .3s ease-in-out,filter .3s ease-in-out;will-change:transform,filter}.grid-item-wrapper.svelte-zi5z1m.svelte-zi5z1m:hover{animation:none;transform:scale(1.05)}.grid-item.svelte-zi5z1m.svelte-zi5z1m{position:relative;width:100%;padding-top:56.25%;overflow:hidden;transition:transform .3s ease-in-out;will-change:transform}.grid-item.svelte-zi5z1m.svelte-zi5z1m:hover{animation:none;transform:scale(1.02)}.grid-item.svelte-zi5z1m img.svelte-zi5z1m{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background-color:#1f2937;transition:filter .3s ease-in-out;will-change:filter}.grid-item.svelte-zi5z1m:hover img.svelte-zi5z1m{animation:none;filter:blur(2px) brightness(.5)}video.svelte-zi5z1m.svelte-zi5z1m{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain}.code.svelte-zi5z1m.svelte-zi5z1m{color:#fff;position:absolute;top:0;background-color:#1f2937e6;padding:5px;font-size:.8rem}.no-video.svelte-zi5z1m.svelte-zi5z1m{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:1.2rem;padding:10px;background-color:#000c;border-radius:8px;color:#fff;opacity:0;animation:svelte-zi5z1m-popup .3s ease-in-out forwards;will-change:transform,opacity}.flex.svelte-zi5z1m.svelte-zi5z1m{display:flex;justify-content:space-between;align-items:center;transition:transform .3s ease-in-out}.grid-item-title.svelte-zi5z1m.svelte-zi5z1m{color:#fff;font-size:14px;margin-top:5px;width:100%;transition:transform .3s ease-in-out}.title.svelte-zi5z1m.svelte-zi5z1m{overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical}.maker.svelte-zi5z1m.svelte-zi5z1m{color:#6495ed;transition:color .3s ease-in-out,transform .3s ease-in-out}.maker.svelte-zi5z1m.svelte-zi5z1m:hover{color:#1e90ff;transform:scale(1.1)}@keyframes svelte-zi5z1m-popup{0%{opacity:0;transform:translate(-50%,-50%) scale(.8)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}@keyframes svelte-zi5z1m-flash{0%{background-color:#1f2937e6}50%{background-color:#333333e6}to{background-color:#1f2937e6}}@keyframes svelte-zi5z1m-blur{0%{filter:blur(0) brightness(1)}50%{filter:blur(1px) brightness(.7)}to{filter:blur(2px) brightness(.5)}}@keyframes svelte-zi5z1m-scale{0%{transform:scale(1)}50%{transform:scale(1.02)}to{transform:scale(1.05)}}.grid-container.svelte-y69kqa{display:grid;grid-template-columns:repeat(4,minmax(300px,1fr));gap:1rem;margin:0 auto;animation:svelte-y69kqa-fadeIn 1s ease-out forwards}@media (min-width: 2000px){.grid-container.svelte-y69kqa{grid-template-columns:repeat(5,1fr);font-size:.9em}}@media (max-width: 1600px){.grid-container.svelte-y69kqa{grid-template-columns:repeat(4,1fr);font-size:.85em}}@media (max-width: 1200px){.grid-container.svelte-y69kqa{grid-template-columns:repeat(3,1fr);font-size:.8em}}@media (max-width: 900px){.grid-container.svelte-y69kqa{grid-template-columns:repeat(2,1fr);font-size:.75em}}@media (max-width: 600px){.grid-container.svelte-y69kqa{grid-template-columns:1fr;font-size:.7em}}@keyframes svelte-y69kqa-fadeIn{0%{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}div.svelte-we16u3{display:inline-block;position:relative;width:100%;height:0;padding-top:56.25%;overflow:hidden}img.svelte-we16u3,video.svelte-we16u3{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;transition:filter .3s ease-in-out;background-color:#1f2937}img.svelte-we16u3:hover{filter:brightness(.5)}.no-video.svelte-we16u3{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:1.5rem} ');
+(e=>{if(typeof GM_addStyle=="function"){GM_addStyle(e);return}const t=document.createElement("style");t.textContent=e,document.head.append(t)})(' @import"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css";.resources.svelte-mhmjd3.svelte-mhmjd3{display:flex;justify-content:flex-end;gap:5px;list-style-type:none}.resources.svelte-mhmjd3>.svelte-mhmjd3{transition:transform .3s ease-in-out,color .3s ease-in-out;color:#fff}.seed.svelte-mhmjd3.svelte-mhmjd3{color:#adff2f;transition:all .3s ease-in-out}.resources.svelte-mhmjd3>.svelte-mhmjd3:hover{color:#0f0}.grid-item-wrapper.svelte-12nfdbu.svelte-12nfdbu{transition:transform .3s ease-in-out,filter .3s ease-in-out;will-change:transform,filter}.grid-item-wrapper.svelte-12nfdbu.svelte-12nfdbu:hover{animation:none;transform:scale(1.05)}.grid-item.svelte-12nfdbu.svelte-12nfdbu{position:relative;width:100%;padding-top:56.25%;overflow:hidden;transition:transform .3s ease-in-out;will-change:transform}.grid-item.svelte-12nfdbu.svelte-12nfdbu:hover{animation:none;transform:scale(1.02)}.grid-item.svelte-12nfdbu img.svelte-12nfdbu{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background-color:#1f2937;transition:filter .3s ease-in-out;will-change:filter}.grid-item.svelte-12nfdbu:hover img.svelte-12nfdbu{animation:none;filter:blur(2px) brightness(.5)}video.svelte-12nfdbu.svelte-12nfdbu{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain}.code.svelte-12nfdbu.svelte-12nfdbu{color:#fff;position:absolute;top:0;background-color:#1f2937e6;padding:5px;font-size:.8rem}.no-video.svelte-12nfdbu.svelte-12nfdbu{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:1.2rem;padding:10px;background-color:#000c;border-radius:8px;color:#fff;opacity:0;animation:svelte-12nfdbu-popup .3s ease-in-out forwards;will-change:transform,opacity}.flex.svelte-12nfdbu.svelte-12nfdbu{display:flex;justify-content:space-between;align-items:center;transition:transform .3s ease-in-out}.grid-item-title.svelte-12nfdbu.svelte-12nfdbu{color:#fff;font-size:14px;margin-top:5px;width:100%;transition:transform .3s ease-in-out}.title.svelte-12nfdbu.svelte-12nfdbu{overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;line-clamp:2;-webkit-box-orient:vertical}.maker.svelte-12nfdbu.svelte-12nfdbu{color:#6495ed;transition:color .3s ease-in-out,transform .3s ease-in-out}.maker.svelte-12nfdbu.svelte-12nfdbu:hover{color:#1e90ff;transform:scale(1.1)}@keyframes svelte-12nfdbu-popup{0%{opacity:0;transform:translate(-50%,-50%) scale(.8)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}@keyframes svelte-12nfdbu-flash{0%{background-color:#1f2937e6}50%{background-color:#333333e6}to{background-color:#1f2937e6}}@keyframes svelte-12nfdbu-blur{0%{filter:blur(0) brightness(1)}50%{filter:blur(1px) brightness(.7)}to{filter:blur(2px) brightness(.5)}}@keyframes svelte-12nfdbu-scale{0%{transform:scale(1)}50%{transform:scale(1.02)}to{transform:scale(1.05)}}.toggle-container.svelte-9avr2h{margin-bottom:1rem}.grid-container.svelte-9avr2h{display:grid;grid-template-columns:repeat(4,minmax(300px,1fr));gap:1rem;margin:0 auto;animation:svelte-9avr2h-fadeIn 1s ease-out forwards}.toggle-button.svelte-9avr2h{font-size:.8rem;padding:.3rem .7rem;border-radius:5px;border:.5px solid rgba(204,204,204,.5);color:#e4e4e4;background-color:#374151;cursor:pointer;transition:all .3s ease}.toggle-button.active.svelte-9avr2h{background-color:#24581d;color:#e4e4e4;border-color:#cccccc80}@media (min-width: 2000px){.grid-container.svelte-9avr2h{grid-template-columns:repeat(5,1fr);font-size:.9em}}@media (max-width: 1600px){.grid-container.svelte-9avr2h{grid-template-columns:repeat(4,1fr);font-size:.85em}}@media (max-width: 1200px){.grid-container.svelte-9avr2h{grid-template-columns:repeat(3,1fr);font-size:.8em}}@media (max-width: 900px){.grid-container.svelte-9avr2h{grid-template-columns:repeat(2,1fr);font-size:.75em}}@media (max-width: 600px){.grid-container.svelte-9avr2h{grid-template-columns:1fr;font-size:.7em}}@keyframes svelte-9avr2h-fadeIn{0%{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}div.svelte-we16u3{display:inline-block;position:relative;width:100%;height:0;padding-top:56.25%;overflow:hidden}img.svelte-we16u3,video.svelte-we16u3{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;transition:filter .3s ease-in-out;background-color:#1f2937}img.svelte-we16u3:hover{filter:brightness(.5)}.no-video.svelte-we16u3{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:1.5rem} ');
 
 (function ($) {
   'use strict';
@@ -69,6 +69,9 @@
   function is_empty(obj) {
     return Object.keys(obj).length === 0;
   }
+  function action_destroyer(action_result) {
+    return action_result && is_function(action_result.destroy) ? action_result.destroy : noop;
+  }
   function append(target, node) {
     target.appendChild(node);
   }
@@ -120,6 +123,9 @@
     } else {
       node.style.setProperty(key, value, "");
     }
+  }
+  function toggle_class(element2, name, toggle) {
+    element2.classList.toggle(name, !!toggle);
   }
   let current_component;
   function set_current_component(component) {
@@ -469,9 +475,33 @@
   if (typeof window !== "undefined")
     (window.__svelte || (window.__svelte = { v: /* @__PURE__ */ new Set() })).v.add(PUBLIC_VERSION);
   var _GM_xmlhttpRequest = /* @__PURE__ */ (() => typeof GM_xmlhttpRequest != "undefined" ? GM_xmlhttpRequest : void 0)();
+  async function getThumb(code) {
+    let url = `https://javtiful.com/channel/fc2ppv?q=${code}`;
+    try {
+      const responseText = await new Promise((resolve, reject) => {
+        _GM_xmlhttpRequest({
+          url,
+          method: "GET",
+          onload: (response) => resolve(response.responseText),
+          onerror: reject
+        });
+      });
+      const $responseText = $(responseText);
+      const $row = $responseText.find("div.row.row-cols-1.row-cols-sm-2");
+      const $contains = $row.find(`div:contains('${code}')`).first();
+      const $img = $contains.find("img").attr("data-src");
+      return $img;
+    } catch (error) {
+      console.error("Error fetching thumbnail:", error);
+      return null;
+    }
+  }
   const videoPreviewCache = {};
-  async function getVideoPreview(code) {
-    const url = `https://123av.com/en/search?keyword=${code}`;
+  async function getVideoPreview(code, missav) {
+    let url = `https://123av.com/en/search?keyword=${code}`;
+    if (missav) {
+      url = `https://missav.ws/en/search/${code}`;
+    }
     if (videoPreviewCache[url] !== void 0) {
       return videoPreviewCache[url];
     }
@@ -485,8 +515,17 @@
         });
       });
       const $responseText = $(responseText);
-      const $gridFirst = $responseText.find("div.col-6.col-sm-4.col-lg-3").first();
-      const previewUrl = $gridFirst.find("div.thumb").attr("data-preview");
+      let previewUrl;
+      if (missav) {
+        const $gridFirst = $responseText.find("div.grid.grid-cols-2").first();
+        previewUrl = $gridFirst.find("video").attr("data-src");
+      } else {
+        const $gridFirst = $responseText.find("div.col-6.col-sm-4.col-lg-3").first();
+        previewUrl = $gridFirst.find("div.thumb").attr("data-preview");
+        if (!previewUrl) {
+          return await getVideoPreview(code, true);
+        }
+      }
       if (previewUrl) {
         const previewBlob = await new Promise((resolve, reject) => {
           _GM_xmlhttpRequest({
@@ -765,7 +804,7 @@
       init(this, options, instance$3, create_fragment$3, safe_not_equal, { code: 0, torrent: 1, magnet: 2, seed: 3 });
     }
   }
-  function create_if_block$1(ctx) {
+  function create_if_block_2$1(ctx) {
     let await_block_anchor;
     let promise;
     let info = {
@@ -773,14 +812,14 @@
       current: null,
       token: null,
       hasCatch: false,
-      pending: create_pending_block$1,
-      then: create_then_block$1,
-      catch: create_catch_block$1,
-      value: 6
+      pending: create_pending_block_1,
+      then: create_then_block_1,
+      catch: create_catch_block_1,
+      value: 13
     };
-    handle_promise(promise = getVideoPreview(
+    handle_promise(promise = getThumb(
       /*movie*/
-      ctx[0].code
+      ctx[1].code
     ), info);
     return {
       c() {
@@ -797,9 +836,107 @@
         ctx = new_ctx;
         info.ctx = ctx;
         if (dirty & /*movie*/
-        1 && promise !== (promise = getVideoPreview(
+        2 && promise !== (promise = getThumb(
           /*movie*/
-          ctx[0].code
+          ctx[1].code
+        )) && handle_promise(promise, info)) ;
+        else {
+          update_await_block_branch(info, ctx, dirty);
+        }
+      },
+      d(detaching) {
+        if (detaching) {
+          detach(await_block_anchor);
+        }
+        info.block.d(detaching);
+        info.token = null;
+        info = null;
+      }
+    };
+  }
+  function create_catch_block_1(ctx) {
+    return { c: noop, m: noop, p: noop, d: noop };
+  }
+  function create_then_block_1(ctx) {
+    let img;
+    let img_src_value;
+    let img_alt_value;
+    return {
+      c() {
+        var _a;
+        img = element("img");
+        if (!src_url_equal(img.src, img_src_value = /*thumbnail*/
+        ((_a = ctx[13]) == null ? void 0 : _a.toString()) ?? /*movie*/
+        ctx[1].thumbnail)) attr(img, "src", img_src_value);
+        attr(img, "alt", img_alt_value = /*movie*/
+        ctx[1].title);
+        attr(img, "loading", "lazy");
+        attr(img, "class", "svelte-12nfdbu");
+      },
+      m(target, anchor) {
+        insert(target, img, anchor);
+      },
+      p(ctx2, dirty) {
+        var _a;
+        if (dirty & /*movie*/
+        2 && !src_url_equal(img.src, img_src_value = /*thumbnail*/
+        ((_a = ctx2[13]) == null ? void 0 : _a.toString()) ?? /*movie*/
+        ctx2[1].thumbnail)) {
+          attr(img, "src", img_src_value);
+        }
+        if (dirty & /*movie*/
+        2 && img_alt_value !== (img_alt_value = /*movie*/
+        ctx2[1].title)) {
+          attr(img, "alt", img_alt_value);
+        }
+      },
+      d(detaching) {
+        if (detaching) {
+          detach(img);
+        }
+      }
+    };
+  }
+  function create_pending_block_1(ctx) {
+    return { c: noop, m: noop, p: noop, d: noop };
+  }
+  function create_if_block$1(ctx) {
+    let await_block_anchor;
+    let promise;
+    let info = {
+      ctx,
+      current: null,
+      token: null,
+      hasCatch: false,
+      pending: create_pending_block$1,
+      then: create_then_block$1,
+      catch: create_catch_block$1,
+      value: 12
+    };
+    handle_promise(promise = getVideoPreview(
+      /*movie*/
+      ctx[1].code,
+      false
+    ), info);
+    return {
+      c() {
+        await_block_anchor = empty();
+        info.block.c();
+      },
+      m(target, anchor) {
+        insert(target, await_block_anchor, anchor);
+        info.block.m(target, info.anchor = anchor);
+        info.mount = () => await_block_anchor.parentNode;
+        info.anchor = await_block_anchor;
+      },
+      p(new_ctx, dirty) {
+        ctx = new_ctx;
+        info.ctx = ctx;
+        if (dirty & /*movie*/
+        2 && promise !== (promise = getVideoPreview(
+          /*movie*/
+          ctx[1].code,
+          false
         )) && handle_promise(promise, info)) ;
         else {
           update_await_block_branch(info, ctx, dirty);
@@ -823,7 +960,7 @@
     function select_block_type(ctx2, dirty) {
       if (
         /*videoPreview*/
-        ctx2[6]
+        ctx2[12]
       ) return create_if_block_1$1;
       return create_else_block$1;
     }
@@ -864,7 +1001,7 @@
       c() {
         p = element("p");
         p.textContent = "No Preview 😭";
-        attr(p, "class", "no-video svelte-zi5z1m");
+        attr(p, "class", "no-video svelte-12nfdbu");
       },
       m(target, anchor) {
         insert(target, p, anchor);
@@ -884,21 +1021,21 @@
       c() {
         video = element("video");
         if (!src_url_equal(video.src, video_src_value = /*videoPreview*/
-        ctx[6])) attr(video, "src", video_src_value);
+        ctx[12])) attr(video, "src", video_src_value);
         video.autoplay = true;
         video.playsInline = true;
         video.loop = true;
         video.muted = true;
         attr(video, "preload", "none");
-        attr(video, "class", "svelte-zi5z1m");
+        attr(video, "class", "svelte-12nfdbu");
       },
       m(target, anchor) {
         insert(target, video, anchor);
       },
       p(ctx2, dirty) {
         if (dirty & /*movie*/
-        1 && !src_url_equal(video.src, video_src_value = /*videoPreview*/
-        ctx2[6])) {
+        2 && !src_url_equal(video.src, video_src_value = /*videoPreview*/
+        ctx2[12])) {
           attr(video, "src", video_src_value);
         }
       },
@@ -922,58 +1059,66 @@
     let img_alt_value;
     let t0;
     let t1;
-    let span;
     let t2;
-    let t3_value = (
-      /*movie*/
-      ctx[0].code + ""
-    );
+    let span;
     let t3;
+    let t4_value = (
+      /*movie*/
+      ctx[1].code + ""
+    );
     let t4;
+    let t5;
     let div3;
     let a0;
-    let t5_value = (
+    let t6_value = (
       /*movie*/
-      ctx[0].title + ""
+      ctx[1].title + ""
     );
-    let t5;
+    let t6;
     let a0_href_value;
     let a0_title_value;
-    let t6;
+    let t7;
     let div2;
     let a1;
-    let t7_value = (
+    let t8_value = (
       /*movie*/
-      ctx[0].maker + ""
+      ctx[1].maker + ""
     );
-    let t7;
-    let a1_href_value;
     let t8;
+    let a1_href_value;
+    let t9;
     let resources;
     let current;
     let mounted;
     let dispose;
-    let if_block = (
+    let if_block0 = (
+      /*thumbLoaded*/
+      ctx[6] && /*isThumb*/
+      ctx[2] && create_if_block_2$1(ctx)
+    );
+    let if_block1 = (
       /*mouseHover*/
-      ctx[2] && create_if_block$1(ctx)
+      (ctx[4] || /*thumbLoaded*/
+      ctx[6] && /*isPreview*/
+      ctx[3]) && create_if_block$1(ctx)
     );
     resources = new Resources({
       props: {
         code: (
           /*movie*/
-          ctx[0].code
+          ctx[1].code
         ),
         torrent: (
           /*torrentDataArray*/
-          ((_a = ctx[1][0]) == null ? void 0 : _a.torrent) ?? null
+          ((_a = ctx[0][0]) == null ? void 0 : _a.torrent) ?? null
         ),
         magnet: (
           /*torrentDataArray*/
-          ((_b = ctx[1][0]) == null ? void 0 : _b.magnet) ?? null
+          ((_b = ctx[0][0]) == null ? void 0 : _b.magnet) ?? null
         ),
         seed: (
           /*torrentDataArray*/
-          ((_c = ctx[1][0]) == null ? void 0 : _c.seed) ?? null
+          ((_c = ctx[0][0]) == null ? void 0 : _c.seed) ?? null
         )
       }
     });
@@ -984,44 +1129,46 @@
         div0 = element("div");
         img = element("img");
         t0 = space();
-        if (if_block) if_block.c();
+        if (if_block0) if_block0.c();
         t1 = space();
+        if (if_block1) if_block1.c();
+        t2 = space();
         span = element("span");
-        t2 = text("FC2-PPV-");
-        t3 = text(t3_value);
-        t4 = space();
+        t3 = text("FC2-PPV-");
+        t4 = text(t4_value);
+        t5 = space();
         div3 = element("div");
         a0 = element("a");
-        t5 = text(t5_value);
-        t6 = space();
+        t6 = text(t6_value);
+        t7 = space();
         div2 = element("div");
         a1 = element("a");
-        t7 = text(t7_value);
-        t8 = space();
+        t8 = text(t8_value);
+        t9 = space();
         create_component(resources.$$.fragment);
         if (!src_url_equal(img.src, img_src_value = /*movie*/
-        ctx[0].thumbnail)) attr(img, "src", img_src_value);
+        ctx[1].thumbnail)) attr(img, "src", img_src_value);
         attr(img, "alt", img_alt_value = /*movie*/
-        ctx[0].title);
+        ctx[1].title);
         attr(img, "loading", "lazy");
-        attr(img, "class", "svelte-zi5z1m");
-        attr(span, "class", "code svelte-zi5z1m");
-        attr(div1, "class", "grid-item svelte-zi5z1m");
-        attr(a0, "class", "title svelte-zi5z1m");
+        attr(img, "class", "svelte-12nfdbu");
+        attr(span, "class", "code svelte-12nfdbu");
+        attr(div1, "class", "grid-item svelte-12nfdbu");
+        attr(a0, "class", "title svelte-12nfdbu");
         attr(a0, "href", a0_href_value = /*movie*/
-        ctx[0].titleUrl);
+        ctx[1].titleUrl);
         attr(a0, "title", a0_title_value = /*movie*/
-        ctx[0].title);
+        ctx[1].title);
         attr(a0, "rel", "noopener");
-        attr(a1, "class", "maker svelte-zi5z1m");
+        attr(a1, "class", "maker svelte-12nfdbu");
         attr(a1, "href", a1_href_value = /*movie*/
-        ctx[0].makerUrl);
+        ctx[1].makerUrl);
         attr(a1, "rel", "noopener");
-        attr(div2, "class", "flex svelte-zi5z1m");
-        attr(div3, "class", "grid-item-title svelte-zi5z1m");
-        attr(div4, "class", "grid-item-wrapper svelte-zi5z1m");
+        attr(div2, "class", "flex svelte-12nfdbu");
+        attr(div3, "class", "grid-item-title svelte-12nfdbu");
+        attr(div4, "class", "grid-item-wrapper svelte-12nfdbu");
         set_style(div4, "filter", "brightness(" + /*torrentDataArray*/
-        (ctx[1][0] ? "1" : "0.5") + ")");
+        (ctx[0][0] ? "1" : "0.5") + ")");
         set_style(div4, "transition", "filter 0.3s ease-in-out");
       },
       m(target, anchor) {
@@ -1030,20 +1177,23 @@
         append(div1, div0);
         append(div0, img);
         append(div0, t0);
-        if (if_block) if_block.m(div0, null);
-        append(div1, t1);
+        if (if_block0) if_block0.m(div0, null);
+        append(div0, t1);
+        if (if_block1) if_block1.m(div0, null);
+        append(div1, t2);
         append(div1, span);
-        append(span, t2);
         append(span, t3);
-        append(div4, t4);
+        append(span, t4);
+        ctx[11](div1);
+        append(div4, t5);
         append(div4, div3);
         append(div3, a0);
-        append(a0, t5);
-        append(div3, t6);
+        append(a0, t6);
+        append(div3, t7);
         append(div3, div2);
         append(div2, a1);
-        append(a1, t7);
-        append(div2, t8);
+        append(a1, t8);
+        append(div2, t9);
         mount_component(resources, div2, null);
         current = true;
         if (!mounted) {
@@ -1052,20 +1202,24 @@
               div0,
               "mouseover",
               /*mouseover_handler*/
-              ctx[3]
+              ctx[8]
             ),
             listen(
               div0,
               "mouseleave",
               /*mouseleave_handler*/
-              ctx[4]
+              ctx[9]
             ),
             listen(
               div0,
               "touchstart",
               /*touchstart_handler*/
-              ctx[5],
+              ctx[10],
               { passive: true }
+            ),
+            action_destroyer(
+              /*observeIntersection*/
+              ctx[7].call(null, div1)
             )
           ];
           mounted = true;
@@ -1074,72 +1228,90 @@
       p(ctx2, [dirty]) {
         var _a2, _b2, _c2;
         if (!current || dirty & /*movie*/
-        1 && !src_url_equal(img.src, img_src_value = /*movie*/
-        ctx2[0].thumbnail)) {
+        2 && !src_url_equal(img.src, img_src_value = /*movie*/
+        ctx2[1].thumbnail)) {
           attr(img, "src", img_src_value);
         }
         if (!current || dirty & /*movie*/
-        1 && img_alt_value !== (img_alt_value = /*movie*/
-        ctx2[0].title)) {
+        2 && img_alt_value !== (img_alt_value = /*movie*/
+        ctx2[1].title)) {
           attr(img, "alt", img_alt_value);
         }
         if (
-          /*mouseHover*/
+          /*thumbLoaded*/
+          ctx2[6] && /*isThumb*/
           ctx2[2]
         ) {
-          if (if_block) {
-            if_block.p(ctx2, dirty);
+          if (if_block0) {
+            if_block0.p(ctx2, dirty);
           } else {
-            if_block = create_if_block$1(ctx2);
-            if_block.c();
-            if_block.m(div0, null);
+            if_block0 = create_if_block_2$1(ctx2);
+            if_block0.c();
+            if_block0.m(div0, t1);
           }
-        } else if (if_block) {
-          if_block.d(1);
-          if_block = null;
+        } else if (if_block0) {
+          if_block0.d(1);
+          if_block0 = null;
+        }
+        if (
+          /*mouseHover*/
+          ctx2[4] || /*thumbLoaded*/
+          ctx2[6] && /*isPreview*/
+          ctx2[3]
+        ) {
+          if (if_block1) {
+            if_block1.p(ctx2, dirty);
+          } else {
+            if_block1 = create_if_block$1(ctx2);
+            if_block1.c();
+            if_block1.m(div0, null);
+          }
+        } else if (if_block1) {
+          if_block1.d(1);
+          if_block1 = null;
         }
         if ((!current || dirty & /*movie*/
-        1) && t3_value !== (t3_value = /*movie*/
-        ctx2[0].code + "")) set_data(t3, t3_value);
+        2) && t4_value !== (t4_value = /*movie*/
+        ctx2[1].code + "")) set_data(t4, t4_value);
         if ((!current || dirty & /*movie*/
-        1) && t5_value !== (t5_value = /*movie*/
-        ctx2[0].title + "")) set_data(t5, t5_value);
+        2) && t6_value !== (t6_value = /*movie*/
+        ctx2[1].title + "")) set_data(t6, t6_value);
         if (!current || dirty & /*movie*/
-        1 && a0_href_value !== (a0_href_value = /*movie*/
-        ctx2[0].titleUrl)) {
+        2 && a0_href_value !== (a0_href_value = /*movie*/
+        ctx2[1].titleUrl)) {
           attr(a0, "href", a0_href_value);
         }
         if (!current || dirty & /*movie*/
-        1 && a0_title_value !== (a0_title_value = /*movie*/
-        ctx2[0].title)) {
+        2 && a0_title_value !== (a0_title_value = /*movie*/
+        ctx2[1].title)) {
           attr(a0, "title", a0_title_value);
         }
         if ((!current || dirty & /*movie*/
-        1) && t7_value !== (t7_value = /*movie*/
-        ctx2[0].maker + "")) set_data(t7, t7_value);
+        2) && t8_value !== (t8_value = /*movie*/
+        ctx2[1].maker + "")) set_data(t8, t8_value);
         if (!current || dirty & /*movie*/
-        1 && a1_href_value !== (a1_href_value = /*movie*/
-        ctx2[0].makerUrl)) {
+        2 && a1_href_value !== (a1_href_value = /*movie*/
+        ctx2[1].makerUrl)) {
           attr(a1, "href", a1_href_value);
         }
         const resources_changes = {};
         if (dirty & /*movie*/
-        1) resources_changes.code = /*movie*/
-        ctx2[0].code;
+        2) resources_changes.code = /*movie*/
+        ctx2[1].code;
         if (dirty & /*torrentDataArray*/
-        2) resources_changes.torrent = /*torrentDataArray*/
-        ((_a2 = ctx2[1][0]) == null ? void 0 : _a2.torrent) ?? null;
+        1) resources_changes.torrent = /*torrentDataArray*/
+        ((_a2 = ctx2[0][0]) == null ? void 0 : _a2.torrent) ?? null;
         if (dirty & /*torrentDataArray*/
-        2) resources_changes.magnet = /*torrentDataArray*/
-        ((_b2 = ctx2[1][0]) == null ? void 0 : _b2.magnet) ?? null;
+        1) resources_changes.magnet = /*torrentDataArray*/
+        ((_b2 = ctx2[0][0]) == null ? void 0 : _b2.magnet) ?? null;
         if (dirty & /*torrentDataArray*/
-        2) resources_changes.seed = /*torrentDataArray*/
-        ((_c2 = ctx2[1][0]) == null ? void 0 : _c2.seed) ?? null;
+        1) resources_changes.seed = /*torrentDataArray*/
+        ((_c2 = ctx2[0][0]) == null ? void 0 : _c2.seed) ?? null;
         resources.$set(resources_changes);
         if (!current || dirty & /*torrentDataArray*/
-        2) {
+        1) {
           set_style(div4, "filter", "brightness(" + /*torrentDataArray*/
-          (ctx2[1][0] ? "1" : "0.5") + ")");
+          (ctx2[0][0] ? "1" : "0.5") + ")");
         }
       },
       i(local) {
@@ -1155,7 +1327,9 @@
         if (detaching) {
           detach(div4);
         }
-        if (if_block) if_block.d();
+        if (if_block0) if_block0.d();
+        if (if_block1) if_block1.d();
+        ctx[11](null);
         destroy_component(resources);
         mounted = false;
         run_all(dispose);
@@ -1164,28 +1338,62 @@
   }
   function instance$2($$self, $$props, $$invalidate) {
     let mouseHover = false;
-    let { movie } = $$props;
     let { torrentDataArray = [] } = $$props;
-    const mouseover_handler = () => $$invalidate(2, mouseHover = true);
-    const mouseleave_handler = () => $$invalidate(2, mouseHover = false);
-    const touchstart_handler = () => $$invalidate(2, mouseHover = true);
+    let { movie } = $$props;
+    let { isThumb } = $$props;
+    let { isPreview } = $$props;
+    let gridItemRef;
+    let thumbLoaded = false;
+    const observeIntersection = (element2) => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !thumbLoaded) {
+            $$invalidate(6, thumbLoaded = true);
+          }
+        });
+      });
+      observer.observe(element2);
+      return observer;
+    };
+    const mouseover_handler = () => $$invalidate(4, mouseHover = true);
+    const mouseleave_handler = () => $$invalidate(4, mouseHover = false);
+    const touchstart_handler = () => $$invalidate(4, mouseHover = true);
+    function div1_binding($$value) {
+      binding_callbacks[$$value ? "unshift" : "push"](() => {
+        gridItemRef = $$value;
+        $$invalidate(5, gridItemRef);
+      });
+    }
     $$self.$$set = ($$props2) => {
-      if ("movie" in $$props2) $$invalidate(0, movie = $$props2.movie);
-      if ("torrentDataArray" in $$props2) $$invalidate(1, torrentDataArray = $$props2.torrentDataArray);
+      if ("torrentDataArray" in $$props2) $$invalidate(0, torrentDataArray = $$props2.torrentDataArray);
+      if ("movie" in $$props2) $$invalidate(1, movie = $$props2.movie);
+      if ("isThumb" in $$props2) $$invalidate(2, isThumb = $$props2.isThumb);
+      if ("isPreview" in $$props2) $$invalidate(3, isPreview = $$props2.isPreview);
     };
     return [
-      movie,
       torrentDataArray,
+      movie,
+      isThumb,
+      isPreview,
       mouseHover,
+      gridItemRef,
+      thumbLoaded,
+      observeIntersection,
       mouseover_handler,
       mouseleave_handler,
-      touchstart_handler
+      touchstart_handler,
+      div1_binding
     ];
   }
   class MovieList extends SvelteComponent {
     constructor(options) {
       super();
-      init(this, options, instance$2, create_fragment$2, safe_not_equal, { movie: 0, torrentDataArray: 1 });
+      init(this, options, instance$2, create_fragment$2, safe_not_equal, {
+        torrentDataArray: 0,
+        movie: 1,
+        isThumb: 2,
+        isPreview: 3
+      });
     }
   }
   const sukebeiCache = {};
@@ -1219,7 +1427,7 @@
   }
   function get_each_context(ctx, list, i) {
     const child_ctx = ctx.slice();
-    child_ctx[4] = list[i];
+    child_ctx[7] = list[i];
     return child_ctx;
   }
   function create_each_block(ctx) {
@@ -1228,9 +1436,9 @@
     function func(...args) {
       return (
         /*func*/
-        ctx[2](
+        ctx[6](
           /*movie*/
-          ctx[4],
+          ctx[7],
           ...args
         )
       );
@@ -1239,14 +1447,19 @@
       props: {
         movie: (
           /*movie*/
-          ctx[4]
+          ctx[7]
+        ),
+        isThumb: (
+          /*isThumb*/
+          ctx[0]
+        ),
+        isPreview: (
+          /*isPreview*/
+          ctx[1]
         ),
         torrentDataArray: (
           /*torrentDataArray*/
-          ctx[1].filter(func).map(
-            /*func_1*/
-            ctx[3]
-          ) || null
+          ctx[3].filter(func).map(func_1) || null
         )
       }
     });
@@ -1262,14 +1475,17 @@
         ctx = new_ctx;
         const movielistpage_changes = {};
         if (dirty & /*movieList*/
-        1) movielistpage_changes.movie = /*movie*/
-        ctx[4];
+        4) movielistpage_changes.movie = /*movie*/
+        ctx[7];
+        if (dirty & /*isThumb*/
+        1) movielistpage_changes.isThumb = /*isThumb*/
+        ctx[0];
+        if (dirty & /*isPreview*/
+        2) movielistpage_changes.isPreview = /*isPreview*/
+        ctx[1];
         if (dirty & /*torrentDataArray, movieList*/
-        3) movielistpage_changes.torrentDataArray = /*torrentDataArray*/
-        ctx[1].filter(func).map(
-          /*func_1*/
-          ctx[3]
-        ) || null;
+        12) movielistpage_changes.torrentDataArray = /*torrentDataArray*/
+        ctx[3].filter(func).map(func_1) || null;
         movielistpage.$set(movielistpage_changes);
       },
       i(local) {
@@ -1287,11 +1503,30 @@
     };
   }
   function create_fragment$1(ctx) {
-    let div;
+    let div0;
+    let button0;
+    let t0;
+    let t1_value = (
+      /*isThumb*/
+      ctx[0] ? "ON" : "OFF"
+    );
+    let t1;
+    let t2;
+    let button1;
+    let t3;
+    let t4_value = (
+      /*isPreview*/
+      ctx[1] ? "ON" : "OFF"
+    );
+    let t4;
+    let t5;
+    let div1;
     let current;
+    let mounted;
+    let dispose;
     let each_value = ensure_array_like(
       /*movieList*/
-      ctx[0]
+      ctx[2]
     );
     let each_blocks = [];
     for (let i = 0; i < each_value.length; i += 1) {
@@ -1302,27 +1537,101 @@
     });
     return {
       c() {
-        div = element("div");
+        div0 = element("div");
+        button0 = element("button");
+        t0 = text("Javtiful Thumbnail ");
+        t1 = text(t1_value);
+        t2 = space();
+        button1 = element("button");
+        t3 = text("View All Preview ");
+        t4 = text(t4_value);
+        t5 = space();
+        div1 = element("div");
         for (let i = 0; i < each_blocks.length; i += 1) {
           each_blocks[i].c();
         }
-        attr(div, "class", "grid-container svelte-y69kqa");
+        attr(button0, "class", "toggle-button svelte-9avr2h");
+        toggle_class(
+          button0,
+          "active",
+          /*isThumb*/
+          ctx[0]
+        );
+        attr(button1, "class", "toggle-button svelte-9avr2h");
+        toggle_class(
+          button1,
+          "active",
+          /*isPreview*/
+          ctx[1]
+        );
+        attr(div0, "class", "toggle-container svelte-9avr2h");
+        attr(div1, "class", "grid-container svelte-9avr2h");
       },
       m(target, anchor) {
-        insert(target, div, anchor);
+        insert(target, div0, anchor);
+        append(div0, button0);
+        append(button0, t0);
+        append(button0, t1);
+        append(div0, t2);
+        append(div0, button1);
+        append(button1, t3);
+        append(button1, t4);
+        insert(target, t5, anchor);
+        insert(target, div1, anchor);
         for (let i = 0; i < each_blocks.length; i += 1) {
           if (each_blocks[i]) {
-            each_blocks[i].m(div, null);
+            each_blocks[i].m(div1, null);
           }
         }
         current = true;
+        if (!mounted) {
+          dispose = [
+            listen(
+              button0,
+              "click",
+              /*click_handler*/
+              ctx[4]
+            ),
+            listen(
+              button1,
+              "click",
+              /*click_handler_1*/
+              ctx[5]
+            )
+          ];
+          mounted = true;
+        }
       },
       p(ctx2, [dirty]) {
-        if (dirty & /*movieList, torrentDataArray, parseInt*/
-        3) {
+        if ((!current || dirty & /*isThumb*/
+        1) && t1_value !== (t1_value = /*isThumb*/
+        ctx2[0] ? "ON" : "OFF")) set_data(t1, t1_value);
+        if (!current || dirty & /*isThumb*/
+        1) {
+          toggle_class(
+            button0,
+            "active",
+            /*isThumb*/
+            ctx2[0]
+          );
+        }
+        if ((!current || dirty & /*isPreview*/
+        2) && t4_value !== (t4_value = /*isPreview*/
+        ctx2[1] ? "ON" : "OFF")) set_data(t4, t4_value);
+        if (!current || dirty & /*isPreview*/
+        2) {
+          toggle_class(
+            button1,
+            "active",
+            /*isPreview*/
+            ctx2[1]
+          );
+        }
+        if (dirty & /*movieList, isThumb, isPreview, torrentDataArray*/
+        15) {
           each_value = ensure_array_like(
             /*movieList*/
-            ctx2[0]
+            ctx2[2]
           );
           let i;
           for (i = 0; i < each_value.length; i += 1) {
@@ -1334,7 +1643,7 @@
               each_blocks[i] = create_each_block(child_ctx);
               each_blocks[i].c();
               transition_in(each_blocks[i], 1);
-              each_blocks[i].m(div, null);
+              each_blocks[i].m(div1, null);
             }
           }
           group_outros();
@@ -1360,33 +1669,59 @@
       },
       d(detaching) {
         if (detaching) {
-          detach(div);
+          detach(div0);
+          detach(t5);
+          detach(div1);
         }
         destroy_each(each_blocks, detaching);
+        mounted = false;
+        run_all(dispose);
       }
     };
   }
   const CHUNK_SIZE = 30;
+  const func_1 = (data) => ({ ...data, seed: data.seed.toString() });
   function instance$1($$self, $$props, $$invalidate) {
     let movieList = [];
     let torrentDataArray = [];
+    let isThumb = JSON.parse(localStorage.getItem("isThumb") || "false");
+    let isPreview = JSON.parse(localStorage.getItem("isPreview") || "false");
     onMount(async () => {
-      $$invalidate(0, movieList = await getMovieList());
+      $$invalidate(2, movieList = await getMovieList());
       const codes = Array.from(new Set(movieList.map((movie) => movie.code)));
       const chunks = [];
       for (let i = 0; i < codes.length; i += CHUNK_SIZE) {
         chunks.push(codes.slice(i, i + CHUNK_SIZE).join("|"));
       }
       const results = await Promise.all(chunks.map(getTorrentDataFromSukebei));
-      $$invalidate(1, torrentDataArray = results.flat());
-      console.log("Torrent data array:", torrentDataArray);
+      $$invalidate(3, torrentDataArray = results.flat());
     });
+    const click_handler = () => $$invalidate(0, isThumb = !isThumb);
+    const click_handler_1 = () => $$invalidate(1, isPreview = !isPreview);
     const func = (movie, data) => data.title.includes(movie.code);
-    const func_1 = (data) => ({
-      ...data,
-      seed: parseInt(data.seed, 10) || 0
-    });
-    return [movieList, torrentDataArray, func, func_1];
+    $$self.$$.update = () => {
+      if ($$self.$$.dirty & /*isThumb*/
+      1) {
+        {
+          localStorage.setItem("isThumb", JSON.stringify(isThumb));
+        }
+      }
+      if ($$self.$$.dirty & /*isPreview*/
+      2) {
+        {
+          localStorage.setItem("isPreview", JSON.stringify(isPreview));
+        }
+      }
+    };
+    return [
+      isThumb,
+      isPreview,
+      movieList,
+      torrentDataArray,
+      click_handler,
+      click_handler_1,
+      func
+    ];
   }
   class Movies extends SvelteComponent {
     constructor(options) {
@@ -1416,7 +1751,8 @@
     };
     handle_promise(getVideoPreview(
       /*movieDetail*/
-      ctx[2].code
+      ctx[2].code,
+      false
     ), info);
     return {
       c() {
@@ -1725,9 +2061,7 @@
     let mouseHover = false;
     let torrentData = [];
     onMount(async () => {
-      var _a;
       $$invalidate(1, torrentData = await getTorrentDataFromSukebei(movieDetail.code));
-      console.log((_a = torrentData[0]) == null ? void 0 : _a.torrent);
     });
     const handleMouseEnter = () => $$invalidate(0, mouseHover = true);
     const handleMouseLeave = () => $$invalidate(0, mouseHover = false);
